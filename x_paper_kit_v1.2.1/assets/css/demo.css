@@ -193,6 +193,7 @@
 .logo-container .logo{
     overflow: hidden;
     border-radius: 50%;
+    background-color: #111;
     border: 1px solid #333333;
     width: 50px;
     float: left;
@@ -991,4 +992,21 @@ pre.prettyprint{
 }
 .example-pages{
     margin-top: 50px;
+}
+
+footer {
+    padding: 25px 5vw !important;
+    color: #dedede;
+}
+
+footer ul {
+    padding-left: 0
+}
+
+footer ul > li {
+    display: block;
+}
+
+footer a {
+    color: #dedede;
 }
