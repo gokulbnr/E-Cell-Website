@@ -1,3 +1,7 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
 .card {
 	display: inline-block;                              /* position divs horizontally */
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);            /* shadow */
