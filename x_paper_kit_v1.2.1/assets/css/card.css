@@ -1,0 +1,34 @@
+.card {
+	display: inline-block;                              /* position divs horizontally */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);            /* shadow */
+	transition: 0.3s;                                   /* shadow */
+	width: 20%;                                         /* size of card */
+	border-radius: 10%;                                 /* rounded corners */
+	margin: 2%;                                         /* spacing between cards */
+	text-align: center;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);           /* shadow */
+}
+
+.card img {
+	border-radius: 10% 10% 0 0;                         /* rounded corners */
+	width: 100%;                                        /* size of avatar relative to card */
+}
+
+.card h4 {
+	font-size: 1.5vw;
+	white-space: nowrap;                                /* don't move text to new line */
+	margin: 5%;
+}
+
+.card a {
+	color: inherit;                                     /* remove link color */
+	font-size: 1.5vw;
+	margin: 5%;
+}
+
+.wrapper {
+	margin: 5%;                                         /* should be global :s */
+}
