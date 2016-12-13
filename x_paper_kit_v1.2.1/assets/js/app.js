@@ -1,7 +1,10 @@
-var teamApp = angular.module('teamApp', []);
+angular
+	.module('app', [])
+	.controller('teamctrl', team);
 
-teamApp.controller('memberListController', function memberListController($scope) {
-	$scope.members = [
+function team() {
+	var vm = this;
+	vm.list = [
 		{
 			'name': 'Suhas Darsi',
 			'image': 'img_avatar.png',
@@ -37,4 +40,4 @@ teamApp.controller('memberListController', function memberListController($scope)
 			'linkedin': ''
 		}
 	];
-});
+}
