@@ -96,14 +96,14 @@
 	<div class="card ng-cloak" ng-repeat="m in team.list">
 		<img ng-src="assets/img/team/{{m.image}}" alt="avatar" />
 		<h4>{{m.name}}</h4>
-		<a target="_blank" class="fa fa-facebook" ng-if="m.facebook != undefined"
-		ng-href="https://www.facebook.com/{{m.facebook}}"></a>
-		<a target="_blank" class="fa fa-instagram" ng-if="m.instagram != undefined"
-		ng-href="https://www.instagram.com/{{m.instagram}}"></a>
-		<a target="_blank" class="fa fa-envelope" ng-if="m.email != undefined" 
-		ng-href="mailto:{{m.email}}"></a>
-		<a target="_blank" class="fa fa-linkedin" ng-if="m.linkedin != undefined"
-		ng-href="https://www.linkedin.com/{{m.linkedin}}"></a>
+		<a target="_blank" class="fa fa-facebook"
+		ng-if="m.facebook != undefined" ng-href="{{m.facebook}}"></a>
+		<a target="_blank" class="fa fa-instagram"
+		ng-if="m.instagram != undefined" ng-href="{{m.instagram}}"></a>
+		<a target="_blank" class="fa fa-envelope"
+		ng-if="m.email != undefined" ng-href="mailto:{{m.email}}"></a>
+		<a target="_blank" class="fa fa-linkedin"
+		ng-if="m.linkedin != undefined" ng-href="{{m.linkedin}}"></a>
 	</div>
 
 </div>

@@ -8,18 +8,18 @@ function team() {
 		{
 			'name': 'Suhas Darsi',
 			'image': 'img_avatar.png',
-			'facebook': 'profile.php?id=100009195932434'
+			'facebook': 'https://www.facebook.com/profile.php?id=100009195932434'
 		},
 		{
 			'name': 'Arghya Bhattacharya',
 			'image': 'img_avatar.png',
-			'facebook': 'arghya.bhattacharay'
+			'facebook': 'https://www.facebook.com/arghya.bhattacharay'
 		},
 		{
 			'name': 'Vivek Kaushal',
 			'image': 'img_avatar.png',
 			'facebook': 'vivek.michaelite',
-			'linkedin': 'in/vivek-kaushal-6020724b'
+			'linkedin': 'https://www.linkedin.com/in/vivek-kaushal-6020724b'
 		},
 		{
 			'name': 'Member X',
