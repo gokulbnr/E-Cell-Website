@@ -6,38 +6,64 @@ function team() {
 	var vm = this;
 	vm.list = [
 		{
-			'name': 'Suhas Darsi',
-			'image': 'img_avatar.png',
-			'facebook': 'https://www.facebook.com/profile.php?id=100009195932434'
-		},
-		{
-			'name': 'Arghya Bhattacharya',
-			'image': 'img_avatar.png',
-			'facebook': 'https://www.facebook.com/arghya.bhattacharay'
-		},
-		{
-			'name': 'Vivek Kaushal',
-			'image': 'img_avatar.png',
-			'facebook': 'vivek.michaelite',
-			'linkedin': 'https://www.linkedin.com/in/vivek-kaushal-6020724b'
-		},
-		{
-			'name': 'Member X',
-			'image': 'img_avatar.png',
-			'facebook': '',
-			'instagram': ''
-		},
-		{
-			'name': 'Member Y',
-			'image': 'img_avatar.png',
+			'name': 'Dhriti Goyal',
+			'image': 'dhriti.jpg',
 			'linkedin': '',
 			'facebook': ''
 		},
 		{
-			'name': 'Member Z',
-			'image': 'img_avatar.png',
-			'email': '',
-			'linkedin': ''
-		}
+			'name': 'Arihant Jain',
+			'image': 'arihant.jpg',
+			'linkedin': '',
+			'facebook': ''
+		},
+		{
+			'name': 'Nishant Gupta',
+			'image': 'nishant.jpg',
+			'facebook': 'https://www.facebook.com/profile.php?id=100009195932434'
+		},
+		{
+			'name': 'Deepanshu Jain',
+			'image': 'deepanshu.jpg',
+			'facebook': '',
+			'instagram': ''
+		},
+		{
+			'name': 'Suhas Darsi',
+			'image': 'suhas.jpg',
+			'facebook': '',
+			'instagram': ''
+		},
+		{
+			'name': 'Parin Vachhani',
+			'image': 'parin.jpg',
+			'facebook': '',
+			'instagram': ''
+		},
+		{
+			'name': 'Shivang Nagaria',
+			'image': 'shivang.jpg',
+			'facebook': '',
+			'instagram': ''
+		},
+		{
+			'name': 'Vivek Kaushal',
+			'image': 'vivek.jpg',
+			'facebook': 'vivek.michaelite',
+			'linkedin': 'https://www.linkedin.com/in/vivek-kaushal-6020724b'
+		},
+
+		{
+			'name': 'Himakar Yv',
+			'image': 'himakar.jpg',
+			'facebook': '',
+			'instagram': ''
+		},
+		{
+			'name': 'Arghya Bhattacharya',
+			'image': 'arghya.jpg',
+			'facebook': 'https://www.facebook.com/arghya.bhattacharay'
+		},
+				
 	];
 }
