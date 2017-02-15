@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+
+def contact(request):
+    return render(request, 'website/contact.html')
 # home part
 
 
@@ -12,7 +15,7 @@ def vision(request):
     return render(request, 'website/vision.html')
 
 
-def successStories(request):
+def success_stories(request):
     return render(request, 'website/success_stories.html')
 
 # Events part
@@ -66,7 +69,7 @@ def faculty(request):
 # e resources
 
 
-def eResources(request):
+def e_resources(request):
 	return render(request,'website/e-resources.html')
 
 # team

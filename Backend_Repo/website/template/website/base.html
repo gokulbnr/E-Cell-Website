@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>E-Cell IIIT Hyderabad</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">E-Cell IIIT Hyderabad </a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
+				<li> <a class='dropdown-button btn' href='#' data-activates='events-dropdown'>Events</a></li>
+				<li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
+				<li> <a class='btn' href="gallery">Gallery</a></li>
+				<li> <a class='btn' href="team">Team</a></li>
+				<li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>
+			</ul>
+		</div>
+	</nav>
+	<ul id='aboutus-dropdown' class='dropdown-content'>
+		<li><a href="about/vision">Vision</a></li>
+		<li class="divider"></li>
+		<li><a href="about/success_stories">Success Stories</a></li>
+	</ul>
+	<ul id="events-dropdown" class='dropdown-content'>
+		<li><a href="events/talks">Talk Sessions</a></li>
+		<li><a href="events/workshops">Workshops</a></li>
+		<li><a href="events/hackathons">Hackathons</a></li>
+	</ul>
+	<ul id="associates-dropdown" class="dropdown-content">
+		<li><a href="associates/associates">Associates</a></li>
+		<li><a href="associates/partners">Patners</a></li>
+		<li><a href="associates/sponsors">Sponsors</a></li>
+	</ul>
+	<ul id="mentors-dropdown" class="dropdown-content">
+		<li><a href="mentors/industry">Industry</a></li>
+		<li><a href="mentors/faculty">Faculty</a></li>
+		<li><a href="mentors/students">Students</a></li>
+	</ul>
+
+
+{% block main %}{% endblock %}
+
+
+</body>
+</html>
