@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>E-Cell IIIT Hyderabad</title>
@@ -12,9 +13,9 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
 
-	<link rel="stylesheet" href= "{% static '/css/materialize.min.css' %}" > 
+	<link rel="stylesheet" href= "{% static 'css/materialize.min.css' %}" >
 	<script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
-	<script src="{% static '/js/materialize.min.js' %}"></script>
+	<script src="{% static 'js/materialize.min.js' %}"></script>
 
 </head>
 
@@ -26,35 +27,81 @@
 				<li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
 				<li> <a class='dropdown-button btn' href='#' data-activates='events-dropdown'>Events</a></li>
 				<li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
-				<li> <a class='btn' href="gallery">Gallery</a></li>
-				<li> <a class='btn' href="team">Team</a></li>
+				<li> <a class='btn' href="/website/gallery">Gallery</a></li>
+				<li> <a class='btn' href="/website/team">Team</a></li>
 				<li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>
 			</ul>
 		</div>
 	</nav>
 	<ul id='aboutus-dropdown' class='dropdown-content'>
-		<li><a href="about/vision">Vision</a></li>
+		<li><a href="/website/about/vision">Vision</a></li>
 		<li class="divider"></li>
 		<li><a href="about/success_stories">Success Stories</a></li>
 	</ul>
 	<ul id="events-dropdown" class='dropdown-content'>
-		<li><a href="events/talks">Talk Sessions</a></li>
-		<li><a href="events/workshops">Workshops</a></li>
-		<li><a href="events/hackathons">Hackathons</a></li>
+		<li><a href="/website/events/talks">Talk Sessions</a></li>
+		<li><a href="/website/events/workshops">Workshops</a></li>
+		<li><a href="/website/events/hackathons">Hackathons</a></li>
 	</ul>
 	<ul id="associates-dropdown" class="dropdown-content">
-		<li><a href="associates/associates">Associates</a></li>
-		<li><a href="associates/partners">Patners</a></li>
-		<li><a href="associates/sponsors">Sponsors</a></li>
+		<li><a href="/website/associates/associates">Associates</a></li>
+		<li><a href="/website/associates/partners">Patners</a></li>
+		<li><a href="/website/associates/sponsors">Sponsors</a></li>
 	</ul>
 	<ul id="mentors-dropdown" class="dropdown-content">
-		<li><a href="mentors/industry">Industry</a></li>
-		<li><a href="mentors/faculty">Faculty</a></li>
-		<li><a href="mentors/students">Students</a></li>
+		<li><a href="/website/mentors/industry">Industry</a></li>
+		<li><a href="/website/mentors/faculty">Faculty</a></li>
+		<li><a href="/website/mentors/students">Students</a></li>
 	</ul>
 
+<br><br>
+{% block main %}<br><br>{% endblock %}
 
-{% block main %}{% endblock %}
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l3 s12">
+				<div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">About Us</span>
+								<li><a class="grey-text text-lighten-3" href="/website/about/vision">Vision</a></li>
+								<li><a class="grey-text text-lighten-3" href="/website/about/success_stories">Success Stroies</a></li>
+							</div>
+						</div>
+					</div>
+
+		  <div class="col l3 s12">
+				<div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Events</span>
+								<li><a class="grey-text text-lighten-3" href="/website/events/talks">Talk Sessions</a></li>
+								<li><a class="grey-text text-lighten-3" href="/website/events/workshops">Workshops</a></li>
+								<li><a class="grey-text text-lighten-3" href="/website/events/hackathons">Hackathons</a></li>
+						</div>
+				</div>
+			</div>
+			<div class="col l3 s12">
+				<div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Reach Us</span>
+								<address>
+									<p>
+										E-Cell IIIT Hyderabad<br>
+										Gachibowli<br>
+										Hyderabad<br>
+										<span class="fa fa-phone"></span> +91 40 32654654<br>
+										<a href="mailto:asd@asd.asd"><span class="fa fa-envelope"></span> asd@asd.asd<br>
+									</p>
+								</address>
+						</div>
+					</div>
+			</div>
+		  <div class="col l3 s12">
+        <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 </body>
