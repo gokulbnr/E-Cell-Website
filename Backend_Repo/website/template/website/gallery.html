@@ -1,3 +1,31 @@
-{% extends "website/home.html" %}
+{% extends "website/base.html" %}
+{% load static %}
 {% block main %}
+<style type="text/css">
+.gray-scaled {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+}
+
+.gray-scaled:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+ 
+}
+</style>
+
+	<h1 class="center">Gallery</h1><br>
+		{% for instances in image %}
+		<div class="row">
+			{% for object in instances %}
+				<div class="col s12 m6 l4">
+				<img src="{% static 'images/gallery/' %}{{ object }}" class="img-responsive gray-scaled center" style="height: 350px; width: auto; margin: 0 0 20px 10%;">
+				</div>
+			{% endfor %}
+		{% endfor %}
+		</div>
 {% endblock %}

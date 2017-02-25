@@ -1,3 +1,34 @@
 {% extends "website/base.html" %}
+{% load static %}
+
 {% block main %}
+	  <div class="row" style="margin-left: 135px;">
+	{% for instance in person %}
+    
+        <div class="col m5" style="margin: 0 20px 20px 20px;">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><h4>&nbsp;&nbsp;{{ instance.firstName }} {{ instance.lastName }}</h4></span>
+             	 <div class="row">
+            	 	 <div class="col m7"><br>
+            	 	  <p style="font-size: 18px; font-weight: bold;"><i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; {{ instance.position }}</p><br>	
+            	 	  <a href="mailto:{{ instance.email }}" style="color:white"><p style="font-size: 15px; font-weight: bold;" ><i class="fa fa-envelope"></i> &nbsp; {{ instance.email }}</p></a><br>
+      				  <p style="font-size: 15px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</p>
+              		</div>
+              		<div class="col m2" style="margin-right: 20px">
+              			<img src = '{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg' class = "circle" style="height:160px; width:160px;">
+              		</div>	
+              		<div class="col m2">
+              		</div>
+            	 </div>
+             </div>
+            <div class="card-action">
+              <a href="{{ instance.fb }}"><i class="fa fa-facebook" target="_blank"></i>&nbsp;&nbsp;Facebook</a>
+              <a href="{{ instance.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;LinkedIn</a>
+            </div>
+          </div>
+        </div>
+	
+     {% endfor %}
+</div>
 {% endblock %}

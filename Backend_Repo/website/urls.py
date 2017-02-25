@@ -19,7 +19,7 @@ urlpatterns = [
 
         # associates
         url(r'^associates/associates/', views.associates, name="associates"),
-        url(r'^associates/patners/', views.patners, name="patners"),
+        url(r'^associates/partners/', views.partners, name="partners"),
         url(r'^associates/sponsors/', views.sponsors, name="sponsors"),
 
         # gallery

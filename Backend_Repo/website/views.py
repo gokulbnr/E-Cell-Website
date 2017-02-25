@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from . import models
+import os
+from django.core import serializers
 
 
 def contact(request):
     return render(request, 'website/contact.html')
+
 # home part
 
 
@@ -11,8 +15,9 @@ def home(request):
 # about part
 
 
-def vision(request):
-    return render(request, 'website/vision.html')
+def team(request):
+    person = models.Person.persons.all()
+    return render(request, 'website/team.html',{ 'person': person })
 
 
 def success_stories(request):
@@ -22,15 +27,18 @@ def success_stories(request):
 
 
 def talks(request):
-    return render(request, 'website/talks.html')
+    events_talks = models.Talks.events_talks.all()
+    return render(request, 'website/talks.html', {'events_talks' : events_talks })
 
 
 def hackathons(request):
-    return render(request, 'website/hackathons.html')
+    events_hackathons = models.Hackathons.events_hackathons.all()
+    return render(request, 'website/hackathons.html', {'events_hackathons' : events_hackathons })
 
 
 def workshops(request):
-    return render(request, 'website/workshops.html')
+    events_workshops = models.Workshops.events_workshops.all()
+    return render(request, 'website/workshops.html', {'events_workshops' : events_workshops })
 
 # associates part
 
@@ -39,8 +47,8 @@ def associates(request):
     return render(request, 'website/associates.html')
 
 
-def patners(request):
-    return render(request, 'website/patners.html')
+def partners(request):
+    return render(request, 'website/partners.html')
 
 
 def sponsors(request):
@@ -50,7 +58,11 @@ def sponsors(request):
 
 
 def gallery(request):
-    return render(request, 'website/gallery.html')
+
+    a = []
+    for root, dirs, files in os.walk('./website/STATIC/images/gallery'):
+        a.append(files)
+    return render(request, 'website/gallery.html',{ 'image': a })
 
 # mentors
 
@@ -74,5 +86,5 @@ def e_resources(request):
 
 # team
 
-def team(request):
-	return render(request,'website/team.html')
+def vision(request):
+    return render(request, 'website/vision.html')
