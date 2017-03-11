@@ -1,3 +1,58 @@
 {% extends "website/base.html" %}
 {% block main %}
+<head><style>
+  .carousel {
+    position:relative;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    background-color: a 
+  }
+  </style></head>
+<div class="row" style="background: #191919;">
+  <div class="container">
+    <div class="carousel carousel-slider" id="events" data-indicators="true">
+      <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
+      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
+      <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>  
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="carousel carousel-slider col s12 m8 center" id="testimonials" data-indicators="true">
+    <div class="carousel-fixed-item"><h2>Testimonials</h2></div>
+    <div class="carousel-item red lighten-2" href="#one!">
+      <p>This is your first panel</p>
+    </div>
+    <div class="carousel-item blue lighten-3" href="#two!">
+      <p>This is your second panel</p>
+    </div>
+    <div class="carousel-item green lighten-2" href="#three!">
+      <p>This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+      $('.carousel').carousel();
+    });      
+  $('.carousel.carousel-slider').carousel({fullWidth: true})
+  //AutoScroll for events
+  autoplay1()   
+  function autoplay1() {
+      $('#events').carousel('next');
+      setTimeout(autoplay1, 4000);
+  }
+  
+  //AutoScroll for testimonials
+  autoplay2()   
+  function autoplay2() {
+      $('#testimonials').carousel('next');
+      setTimeout(autoplay2, 5000);
+  }
+  </script>
 {% endblock %}

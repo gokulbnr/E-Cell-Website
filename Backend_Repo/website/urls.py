@@ -3,7 +3,7 @@ from website import views
 
 urlpatterns = [
 
-        url(r'^$', views.home, name="home"),
+        url(r'^$', views.home, name="index"),
 
         #contact us
         url(r'^contact/', views.contact, name="contact"),
