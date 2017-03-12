@@ -25,20 +25,11 @@ def success_stories(request):
 
 # Events part
 
-
-def talks(request):
+def events(request):
     events_talks = models.Talks.events_talks.all()
-    return render(request, 'website/talks.html', {'events_talks' : events_talks })
-
-
-def hackathons(request):
     events_hackathons = models.Hackathons.events_hackathons.all()
-    return render(request, 'website/hackathons.html', {'events_hackathons' : events_hackathons })
-
-
-def workshops(request):
     events_workshops = models.Workshops.events_workshops.all()
-    return render(request, 'website/workshops.html', {'events_workshops' : events_workshops })
+    return render(request, 'website/events.html', {'events_talks' : events_talks, 'events_hackathons' : events_hackathons, 'events_workshops' : events_workshops })
 
 # associates part
 

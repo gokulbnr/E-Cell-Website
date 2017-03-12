@@ -13,9 +13,7 @@ urlpatterns = [
          url(r'^about/success_stories/', views.success_stories, name = "success_stories"),
 
         # events
-        url(r'^events/talks', views.talks, name="talks"),
-        url(r'^events/hackathons', views.hackathons, name="hackathons"),
-        url(r'^events/workshops', views.workshops, name="workshops"),
+        url(r'^events/', views.events, name="events"),
 
         # associates
         url(r'^associates/associates/', views.associates, name="associates"),
