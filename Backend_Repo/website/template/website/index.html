@@ -1,39 +1,35 @@
 {% extends "website/base.html" %}
 {% block main %}
-<head><style>
-  .carousel {
-    position: relative;
+<div class="row">
+    <div class="carousel carousel-slider" id="events" style="position: relative;
     height: auto;
     width: 100%;
     overflow: hidden;
-    vertical-align: baseline;
-  }
-  </style></head>
-<div class="row" style="background: #191919;">
-  <div class="container col s12 m12" style="max-height:80%">
-    <div class="carousel carousel-slider" id="events" data-indicators="true">
-      <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
-      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
-      <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>  
+    vertical-align: baseline;" data-indicators="true">
+      <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1" class="responsive-img"></a>
+      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2" class="responsive-img"></a>
+      <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3" class="responsive-img"></a>  
     </div>
-  </div>
 </div>
 
 <div class="row">
-  <div class="carousel carousel-slider col s12 m8 center" id="testimonials" data-indicators="true">
-    <div class="carousel-fixed-item"><h2>Testimonials</h2></div>
-    <div class="carousel-item red lighten-2" href="#one!">
-      <p>This is your first panel</p>
+  <div class="col s12 m8">
+    <div class="carousel carousel-slider" id="testimonials" style="position: relative;
+      height: auto;
+      width: 100%;
+      overflow: hidden;
+      vertical-align: baseline;" data-indicators="true">
+      <div class="carousel-item" href="#one!">
+        <img src="http://hahaquotes.com/wp-content/uploads/2015/12/quotes-on-wisdom-and-experience-by-Gandhi.jpg" class="responsive-img"><!--Testimonials in img form-->
+      </div>
+      <div class="carousel-item" href="#two!">
+        <img src="http://quotesta.com/wp-content/uploads/Great-Quotes-From-Great-Leaders-1.jpg" class="responsive-img">
+      </div>
     </div>
-    <div class="carousel-item blue lighten-3" href="#two!">
-      <p>This is your second panel</p>
-    </div>
-    <div class="carousel-item green lighten-2" href="#three!">
-      <p>This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <p class="white-text">This is your fourth panel</p>
-    </div>
+  </div>
+  
+  <div class="col s12 m4">
+  <!--News Feed or RSS Feed to be embedded here-->
   </div>
 </div>
 <script>
