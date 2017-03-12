@@ -12,7 +12,7 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href= "{% static 'css/materialize.min.css' %}">
 	<script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
 	<script src="{% static 'js/materialize.min.js' %}"></script>
@@ -35,7 +35,7 @@
         <img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto">
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
-				<li> <a class='dropdown-button btn' href='#' data-activates='events-dropdown'>Events</a></li>
+				<li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
 				<li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
 				<li> <a class='btn' href="/website/gallery">Gallery</a></li>
 				<li> <a class='btn' href="/website/team">Team</a></li>
@@ -47,11 +47,6 @@
 		<li><a href="/website/about/vision">Vision</a></li>
 		<li class="divider"></li>
 		<li><a href="about/success_stories">Success Stories</a></li>
-	</ul>
-	<ul id="events-dropdown" class='dropdown-content'>
-		<li><a href="/website/events/talks">Talk Sessions</a></li>
-		<li><a href="/website/events/workshops">Workshops</a></li>
-		<li><a href="/website/events/hackathons">Hackathons</a></li>
 	</ul>
 	<ul id="associates-dropdown" class="dropdown-content">
 		<li><a href="/website/associates/associates">Associates</a></li>
@@ -76,9 +71,9 @@
               <span class="card-title">About Us</span>
 								<li><a class="grey-text text-lighten-3" href="/website/about/vision">Vision</a></li>
 								<li><a class="grey-text text-lighten-3" href="/website/about/success_stories">Success Stroies</a></li>
-							</div>
-						</div>
-					</div>
+			</div>
+				</div>
+		</div>
 
 		  <div class="col l3 s12">
 				<div class="card black">
@@ -100,7 +95,7 @@
 										Gachibowli<br>
 										Hyderabad<br>
 										<span class="fa fa-phone"></span> +91 40 32654654<br>
-										<a href="mailto:asd@asd.asd"><span class="fa fa-envelope"></span> asd@asd.asd<br>
+										<a href="mailto:asd@asd.asd"><span class="fa fa-envelope"></span> asd@asd.asd<br></a>
 									</p>
 								</address>
 						</div>
