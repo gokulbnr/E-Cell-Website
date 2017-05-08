@@ -2,94 +2,102 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>E-Cell IIIT Hyderabad</title>
+    <title>E-Cell IIIT Hyderabad</title>
 
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-	<meta name="viewport" content="width=device-width" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href= "{% static 'css/materialize.min.css' %}">
-	<script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
-	<script src="{% static 'js/materialize.min.js' %}"></script>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+    <!--<script src="{% static 'js/materialize.min.js' %}"></script>-->
+    <script src="{% static 'js/materialize.js' %}"></script>
     <style>
-      
-      body {
-        background-color:#DFE2DB !important;
-      }
-      .btn {
-        background-color: #FFF000;
-        color: black !important;
+        body {
+            background-color: #DFE2DB !important;
+        }
         
-      }
+        .btn {
+            background-color: #FFF000;
+            color: black !important;
+        }
     </style>
 </head>
 
 <body>
-	<nav>
-		<div class="nav-wrapper black">
-          <a href="/website/"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
-				<li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
-				<li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
-				<li> <a class='btn' href="/website/gallery">Gallery</a></li>
-				<li> <a class='btn' href="/website/team">Team</a></li>
-				<li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>
-			</ul>
-		</div>
-	</nav>
-	<ul id='aboutus-dropdown' class='dropdown-content'>
-		<li><a href="/website/about/vision">Vision</a></li>
-		<li class="divider"></li>
-		<li><a href="about/success_stories">Success Stories</a></li>
-	</ul>
-	<ul id="associates-dropdown" class="dropdown-content">
-		<li><a href="/website/associates/associates">Associates</a></li>
-		<li><a href="/website/associates/partners">Patners</a></li>
-		<li><a href="/website/associates/sponsors">Sponsors</a></li>
-	</ul>
-	<ul id="mentors-dropdown" class="dropdown-content">
-		<li><a href="/website/mentors/industry">Industry</a></li>
-		<li><a href="/website/mentors/faculty">Faculty</a></li>
-		<li><a href="/website/mentors/students">Students</a></li>
-	</ul>
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="/website/"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
+            <ul id="nav-mobile" class="black right hide-on-med-and-down">
+
+                <!--
+									Fix fading 
+									change button background color
+									
+								-->
+
+                <li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
+                <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
+                <li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
+                <li> <a class='btn' href="/website/gallery">Gallery</a></li>
+                <li> <a class='btn' href="/website/team">Team</a></li>
+                <li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id='aboutus-dropdown' class='dropdown-content'>
+        <li><a href="/website/about/vision">Vision</a></li>
+        <li class="divider"></li>
+        <li><a href="about/success_stories">Success Stories</a></li>
+    </ul>
+    <ul id="associates-dropdown" class="dropdown-content">
+        <li><a href="/website/associates/associates">Associates</a></li>
+        <li><a href="/website/associates/partners">Patners</a></li>
+        <li><a href="/website/associates/sponsors">Sponsors</a></li>
+    </ul>
+    <ul id="mentors-dropdown" class="dropdown-content">
+        <li><a href="/website/mentors/industry">Industry</a></li>
+        <li><a href="/website/mentors/faculty">Faculty</a></li>
+        <li><a href="/website/mentors/students">Students</a></li>
+    </ul>
 
 
-{% block main %}<br><br>{% endblock %}
+    {% block main %}<br><br>{% endblock %}
 
-<footer class="page-footer black">
-  <div class="container">
-    <div class="row">
-      <div class="col l3 s12">
-				<div class="card black">
-            <div class="card-content white-text">
-              <span class="card-title">About Us</span>
-								<li><a class="grey-text text-lighten-3" href="/website/about/vision">Vision</a></li>
-								<li><a class="grey-text text-lighten-3" href="/website/about/success_stories">Success Stroies</a></li>
-			</div>
-				</div>
-		</div>
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l3 s12">
+                    <div class="card black">
+                        <div class="card-content white-text">
+                            <span class="card-title">About Us</span>
+                            <li><a class="grey-text text-lighten-3" href="/website/about/vision">Vision</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/website/about/success_stories">Success Stroies</a></li>
+                        </div>
+                    </div>
+                </div>
 
-		  <div class="col l3 s12">
-				<div class="card black">
-            <div class="card-content white-text">
-              <span class="card-title">Events</span>
-								<li><a class="grey-text text-lighten-3" href="/website/events/talks">Talk Sessions</a></li>
-								<li><a class="grey-text text-lighten-3" href="/website/events/workshops">Workshops</a></li>
-								<li><a class="grey-text text-lighten-3" href="/website/events/hackathons">Hackathons</a></li>
-						</div>
-				</div>
-			</div>
-			<div class="col l3 s12">
-				<div class="card black">
-            <div class="card-content white-text">
-              <span class="card-title">Reach Us</span>
-								<address>
+                <div class="col l3 s12">
+                    <div class="card black">
+                        <div class="card-content white-text">
+                            <span class="card-title">Events</span>
+                            <li><a class="grey-text text-lighten-3" href="/website/events/talks">Talk Sessions</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/website/events/workshops">Workshops</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/website/events/hackathons">Hackathons</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l3 s12">
+                    <div class="card black">
+                        <div class="card-content white-text">
+                            <span class="card-title">Reach Us</span>
+                            <address>
 									<p>
 										E-Cell IIIT Hyderabad<br>
 										Gachibowli<br>
@@ -98,16 +106,17 @@
 										<a href="mailto:asd@asd.asd"><span class="fa fa-envelope"></span> asd@asd.asd<br></a>
 									</p>
 								</address>
-						</div>
-					</div>
-			</div>
-		  <div class="col l3 s12">
-        <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
-      </div>
-    </div>
-  </div>
-</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l3 s12">
+                    <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
+
 </html>
