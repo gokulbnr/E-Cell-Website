@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+
 
 
     <title>E-Cell IIIT Hyderabad</title>
@@ -38,22 +39,29 @@
 <body>
     <nav>
         <div class="nav-wrapper black">
-            <a href="/website/"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
-            <ul id="nav-mobile" class="black right hide-on-med-and-down">
+            <!--<div class="col-md-1">
+            </div>-->
+            <div class="col-md-2">
+                <a href="/website/"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
+            </div>
+            <div class="col-md-10">
+                <ul id="nav-mobile" class="black right hide-on-med-and-down">
 
-                <!--
+                    <!--
 									Fix fading 
 									change button background color
 									
 								-->
 
-                <li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
-                <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
-                <li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
-                <li> <a class='btn' href="/website/gallery">Gallery</a></li>
-                <li> <a class='btn' href="/website/team">Team</a></li>
-                <li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>
-            </ul>
+                    <li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
+                    <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
+                    <li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
+                    <li> <a class='btn' href="/website/gallery">Gallery</a></li>
+                    <li> <a class='btn' href="/website/team">Team</a></li>
+                    <li> <a class='btn' href="/website/contact">Contact Us</a></li>
+                    <!--<li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>-->
+                </ul>
+            </div>
         </div>
     </nav>
     <ul id='aboutus-dropdown' class='dropdown-content'>

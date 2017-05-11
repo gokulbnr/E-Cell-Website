@@ -1,148 +1,168 @@
-{% extends "website/base.html" %}
-{% block main %}
+{% extends "website/base.html" %} {% block main %}{% load staticfiles %}
+<img src="{% static 'images/sample4.png' %}" />
 <div class="container" id="events-main">
-  	<div class="row">
-  	<div class="carousel carousel-slider">
-  		<!-- iterate over links here -->
-	    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2" class="responsive-img"></a>
-	    <!-- end iteration here -->
-	    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3" class="responsive-img"></a>
-	    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4" class="responsive-img"></a>
-	</div>
-	</div>
-	<div class="row">
-		<h3 class="center-align"> Upcoming Events </h3>
-	</div>
-	<div class="row">
-	<div class="carousel carousel-slider center" data-indicators="true">
-		<!-- iterate over this block -->
-		<div class="carousel-item">
-			<h2 class="flow-text">
-				First Event Upcoming 
-			</h2>
-			<a class="btn-floating waves-effect waves-dark  grey" href="#">
-			<i class="small material-icons ">today</i></a>
-			<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		<!-- end block here  -->
-		<div class="carousel-item">
-			<h2 class="flow-text">
-				Second Event Upcoming 
-			</h2>
-			<a class="btn-floating waves-effect waves-dark  grey" href="#">
-			<i class="small material-icons ">today</i></a>
-			<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-	</div>
-	</div>
-	<div class="row">
-		<h3 class="center-align"> Other Events </h3>
-	</div>
-	<div class="row">
-		<div class="col s12">
-			<ul class="tabs">
-				<li class="tab col s4"><a href="#talks"> Talk Sessions </a> </li>
-				<li class="tab col s4"><a href="#workshops"> Workshops </a> </li><li class="tab col s4"><a href="#hackathons"> Hackathons </a> </li>
-			</ul>
-		</div>
-		<div class="col s12">
-			<div id="talks" class="col s12"> 
-				<!-- iterate over this block -->
-				<div class="card-panel hoverable">
-					<div class="card-image">
-						<img src="http://lorempixel.com/800/400/food/2" class="responsive-img">
-					</div>
-					<div class="card-stacked">
-						<div class="card-action">
-							<h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
-						</div>
-						<div class="card-content">
-							<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-						</div>
-					</div>
-				</div>
-				<!-- end block here  -->
-				<div class="card-panel hoverable">
-					<div class="card-image">
-						<img src="http://lorempixel.com/800/400/food/3" class="responsive-img">
-					</div>
-					<div class="card-stacked">
-						<div class="card-action">
-							<h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i> </a>
-						</div>
-						<div class="card-content">
-							<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="workshops" class="col s12"> 
-				<!-- iterate over this block -->
-				<div class="card-panel hoverable">
-					<div class="card-image">
-						<img src="http://lorempixel.com/800/400/food/4" class="responsive-img">
-					</div>
-					<div class="card-stacked">
-						<div class="card-action">
-							<h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
-						</div>
-						<div class="card-content">
+    <div class="row">
+        <div class="carousel carousel-slider">
+            <!-- iterate over links here -->
+            <!--<a class="carousel-item" href="#two!"><img src="{% static 'images/events/current.png' %}" class="responsive-img"></a>-->
+            <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3" class="responsive-img"></a>
+            <!--<a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4" class="responsive-img"></a>-->
+            <!-- end iteration here -->
 
-							<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-						</div>
-					</div>
-				</div>
-				<!-- end block here  -->
-				<div class="card-panel hoverable">
-					<div class="card-image">
-						<img src="http://lorempixel.com/800/400/food/3" class="responsive-img">
-					</div>
-					<div class="card-stacked">
-						<div class="card-action">
-							<h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
-						</div>
-						<div class="card-content">
+        </div>
+    </div>
+    <div class="row">
+        <h3 class="center-align"> Upcoming Events </h3>
+    </div>
+    <div class="row">
+        <div class="carousel carousel-slider center" data-indicators="true">
+            <!-- iterate over this block -->
+            <div class="carousel-item">
+                <h2 class="flow-text">
+                    First Event Upcoming
+                </h2>
+                <a class="btn-floating waves-effect waves-dark  grey" href="#">
+                    <i class="small material-icons ">today</i></a>
+                <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <!-- end block here  -->
+            <div class="carousel-item">
+                <h2 class="flow-text">
+                    Second Event Upcoming
+                </h2>
+                <a class="btn-floating waves-effect waves-dark  grey" href="#">
+                    <i class="small material-icons ">today</i></a>
+                <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3 class="center-align"> Other Events </h3>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4"><a href="#talks"> Talk Sessions </a> </li>
+                <li class="tab col s4"><a href="#workshops"> Workshops </a> </li>
+                <li class="tab col s4"><a href="#hackathons"> Hackathons </a> </li>
+            </ul>
+        </div>
+        <div class="col s12">
+            <div id="talks" class="col s12">
+                <!-- iterate over this block -->
+                <div class="card-panel hoverable">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/800/400/food/2" class="responsive-img">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-action">
+                            <h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end block here  -->
+                <div class="card-panel hoverable">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/800/400/food/3" class="responsive-img">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-action">
+                            <h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i> </a>
+                        </div>
+                        <div class="card-content">
+                            <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="workshops" class="col s12">
+                <!-- iterate over this block -->
+                <div class="card-panel hoverable">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/800/400/food/4" class="responsive-img">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-action">
+                            <h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
+                        </div>
+                        <div class="card-content">
 
-							<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="hackathons" class="col s12"> 
-				<!-- iterate over this block -->
-				<div class="card-panel hoverable">
-					<div class="card-image">
-						<img src="http://lorempixel.com/800/400/food/2" class="responsive-img">
-					</div>
-					<div class="card-stacked">
-						<div class="card-action">
-							<h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
-						</div>
-						<div class="card-content">
+                            <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end block here  -->
+                <div class="card-panel hoverable">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/800/400/food/3" class="responsive-img">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-action">
+                            <h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
+                        </div>
+                        <div class="card-content">
 
-							<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-						</div>
-					</div>
-				</div>
-				<!-- end block here  -->
-				<div class="card-panel hoverable">
-					<div class="card-image">
-						<img src="http://lorempixel.com/800/400/food/4" class="responsive-img">
-					</div>
-					<div class="card-stacked">
-						<div class="card-action">
-							<h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
-						</div>
-						<div class="card-content">
+                            <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hackathons" class="col s12">
+                <!-- iterate over this block -->
+                <div class="card-panel hoverable">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/800/400/food/2" class="responsive-img">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-action">
+                            <h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
+                        </div>
+                        <div class="card-content">
 
-							<p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Scripts -->
-	<script>  $('.carousel.carousel-slider').carousel({fullWidth: true}); </script>
+                            <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end block here  -->
+                <div class="card-panel hoverable">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/800/400/food/4" class="responsive-img">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-action">
+                            <h4> Event Title </h4> <a href="#" class="btn waves-effect waves-light right-align"><i class="medium material-icons">today</i></a>
+                        </div>
+                        <div class="card-content">
+
+                            <p class="flow-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. asdfsdfsUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true
+        });
+    </script>
 </div>
 {% endblock %}
