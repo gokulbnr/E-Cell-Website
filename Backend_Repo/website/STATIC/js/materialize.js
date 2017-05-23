@@ -1847,7 +1847,7 @@ if (jQuery) {
     $.fn.dropdown = function(options) {
         var defaults = {
             inDuration: 300,
-            outDuration: 2000,
+            outDuration: 225,
             constrainWidth: true, // Constrains width of dropdown to the activator
             hover: true,
             gutter: 16, // Spacing from edge
@@ -2023,7 +2023,7 @@ if (jQuery) {
             function hideDropdown() {
                 // Check for simultaneous focus and click events.
                 isFocused = false;
-                activates.fadeOut(curr_options.outDuration);
+                activates.slideUp(curr_options.outDuration);
                 activates.removeClass('active');
                 origin.removeClass('active');
                 $(document).unbind('click.' + activates.attr('id') + ' touchstart.' + activates.attr('id'));
