@@ -18,17 +18,13 @@
         <br />
         <!--<div class="panel panel-default">-->
         {% for instance in person %}
-        <div class="col m5 card card-main white-text blue-grey darken-2;font-family:'Open Sans', sans-serif" style="width: 14em; margin: 0.5em 0.5em 1em 0.5em;">
+        <div class="col m5 card card-main white-text blue-grey darken-2" style="width: 14em; margin: 0.5em 0.5em 1em 0.5em;">
             <div class="empty blue-grey lighten-3" style="height: 5.3em;margin: 0em -0.8em 0em -0.8em;"></div>
             <div class="card-content profile-data center" style=" height: 9em; padding: 1em!important;font-size: 15px;">
                 <img class="profile-img center" height="100" style="margin-top:-5em;" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
                 <div class="person-name card-title">{{ instance.firstName }} {{ instance.lastName }}</div>
-                <div class="person-role">{{ instance.position }}</div>
             </div>
             <div class="center person-contact-details" style="height: 5em;">
-                <div class="row">
-                    <div style="font-family:'Lato',serif; font-size:12px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</div>
-                </div>
                 <div class="row">
                     <a href="mailto:{{ instance.email }}" class="waves-effect email btn col s3 offset-s1"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                     <a href="{{ instance.fb }}" class="waves-effect facebook-link btn col s3 offset-s1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -48,7 +44,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Contact No</th>
-                    <th>Facebook</th>
+                    <th colspan="2">Social Media</th>
                     <th>Work Position</th>
                 </tr>
             </thead>
@@ -59,7 +55,8 @@
                     <td>{{ p.email }}</td>
                     <td>{{ p.phoneNo }}</td>
                     <td><a href="{{ p.fb }}" target="_blank"><i class="fa fa-facebook"></i></td>
-						<td>{{ p.position }}</td>
+                    <td><a href="{{ p.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></td>
+					<td>{{ p.position }}</td>
 					</tr>
 				{% endfor %}
 			</tbody>
