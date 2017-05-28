@@ -1,10 +1,22 @@
 {% extends "website/base.html" %} {% block main %}{% load staticfiles %}
+{% block links %}
+<script src="{% static 'js/moment.js' %}"></script>
+<link href="{% static 'css/calendar.css' %}" type="text/css" rel="stylesheet">
+<script src="{% static 'js/calendar.js' %}"></script>
+{% endblock %}
+{% block styles %}
+<style>
+    #events, #testimonials {
+        position: relative;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        vertical-align: baseline;
+    }
+</style>
+{% endblock %}
 <div class="row">
-    <div class="carousel carousel-slider" id="events" style="position: relative;
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-    vertical-align: baseline;" data-indicators="true">
+    <div class="carousel carousel-slider" id="events" data-indicators="true">
         <!--<a class="carousel-item" href="#one!"><img src="{% static 'images/a.jpg' %}" class="responsive-img"></a>-->
         <!--Events Images-->
         <!--<a class="carousel-item" href="#two!"><img src="{% static 'images/b.jpg' %}" class="responsive-img"></a>-->
@@ -13,40 +25,34 @@
 </div>
 
 <div class="row">
-    <div class="col s12 m8">
-        <div class="carousel carousel-slider" id="testimonials" style="position: relative;
-      height: auto;
-      width: 100%;
-      overflow: hidden;
-      vertical-align: baseline;" data-indicators="true">
+    <div class="col s12 m8 ">
+        <div class="carousel carousel-slider" id="testimonials" data-indicators="true">
             <div class="carousel-item" href="#one!">
-                <img src="http://hahaquotes.com/wp-content/uploads/2015/12/quotes-on-wisdom-and-experience-by-Gandhi.jpg" class="responsive-img">
+                <img src="http://lorempixel.com/800/400" class="responsive-img">
                 <!--Testimonials in img form-->
             </div>
             <div class="carousel-item" href="#two!">
-                <img src="http://quotesta.com/wp-content/uploads/Great-Quotes-From-Great-Leaders-1.jpg" class="responsive-img">
+                <img src="http://lorempixel.com/800/400" class="responsive-img">
             </div>
         </div>
     </div>
-
-    <div class="col s12 m4">
-        <!--News Feed or RSS Feed to be embedded here-->
-    </div>
-</div>
-<script>
-    $(document).ready(function() {
-        $('.carousel').carousel();
+    <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
+    <script>
+        $(document).ready(function() {
+            $('.carousel').carousel();
+        // insert calender events, etc using this function
+        $('#calendar').fullCalendar({});
     });
-    $('.carousel.carousel-slider').carousel({
+        $('.carousel.carousel-slider').carousel({
             fullWidth: true
-        })
+        });
         //AutoScroll for events
-    autoplay1()
+        autoplay1();
 
-    function autoplay1() {
-        $('#events').carousel('next');
-        setTimeout(autoplay1, 4000);
-    }
+        function autoplay1() {
+            $('#events').carousel('next');
+            setTimeout(autoplay1, 4000);
+        }
 
     //AutoScroll for testimonials
     autoplay2()
@@ -56,4 +62,5 @@
         setTimeout(autoplay2, 5000);
     }
 </script>
+</div>
 {% endblock %}
