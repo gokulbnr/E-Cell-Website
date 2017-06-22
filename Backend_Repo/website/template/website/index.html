@@ -1,12 +1,11 @@
-{% extends "website/base.html" %} {% block main %}{% load staticfiles %}
-{% block links %}
+{% extends "website/base.html" %} {% block main %}{% load staticfiles %} {% block links %}
 <script src="{% static 'js/moment.js' %}"></script>
 <link href="{% static 'css/calendar.css' %}" type="text/css" rel="stylesheet">
 <script src="{% static 'js/calendar.js' %}"></script>
-{% endblock %}
-{% block styles %}
+{% endblock %} {% block styles %}
 <style>
-    #events, #testimonials {
+    #events,
+    #testimonials {
         position: relative;
         height: auto;
         width: 100%;
@@ -17,14 +16,23 @@
 {% endblock %}
 <div class="row">
     <div class="carousel carousel-slider" id="events" data-indicators="true">
-        <!--<a class="carousel-item" href="#one!"><img src="{% static 'images/a.jpg' %}" class="responsive-img"></a>-->
+        <a class="carousel-item" href="#one!"><img src="{% static 'images/a.jpg' %}" class="responsive-img"></a>
         <!--Events Images-->
-        <!--<a class="carousel-item" href="#two!"><img src="{% static 'images/b.jpg' %}" class="responsive-img"></a>-->
-        <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3" class="responsive-img"></a>
+        <a class="carousel-item" href="#two!"><img src="{% static 'images/b.jpg' %}" class="responsive-img"></a>
     </div>
 </div>
-
 <div class="row">
+    <img src="{% static 'images/pic3.jpg' %}" />
+</div>
+<div class="row panel">
+    <img src="{% static 'images/sample4.png' %}" />
+    <!--</div>-->
+    <p style="text-align: center; font-family:'Lato',serif; font-size:30px">
+        It's not about ideas, It's about making ideas happen.
+    </p>
+</div>
+<div class="row">
+    <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
     <div class="col s12 m8 ">
         <div class="carousel carousel-slider" id="testimonials" data-indicators="true">
             <div class="carousel-item" href="#one!">
@@ -36,13 +44,13 @@
             </div>
         </div>
     </div>
-    <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
+
     <script>
         $(document).ready(function() {
             $('.carousel').carousel();
-        // insert calender events, etc using this function
-        $('#calendar').fullCalendar({});
-    });
+            // insert calender events, etc using this function
+            $('#calendar').fullCalendar({});
+        });
         $('.carousel.carousel-slider').carousel({
             fullWidth: true
         });
@@ -54,13 +62,13 @@
             setTimeout(autoplay1, 4000);
         }
 
-    //AutoScroll for testimonials
-    autoplay2()
+        //AutoScroll for testimonials
+        autoplay2()
 
-    function autoplay2() {
-        $('#testimonials').carousel('next');
-        setTimeout(autoplay2, 5000);
-    }
-</script>
+        function autoplay2() {
+            $('#testimonials').carousel('next');
+            setTimeout(autoplay2, 5000);
+        }
+    </script>
 </div>
 {% endblock %}
