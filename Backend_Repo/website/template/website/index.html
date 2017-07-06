@@ -1,81 +1,309 @@
 {% extends "website/base.html" %} {% block main %}{% load staticfiles %} {% block links %}
+
+
 <script src="{% static 'js/moment.js' %}"></script>
 <link href="{% static 'css/calendar.css' %}" type="text/css" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet">
 <script src="{% static 'js/calendar.js' %}"></script>
+
 {% endblock %} {% block styles %}
 <style>
     #events,
     #testimonials {
+        position: relative;
+        max-height: 200px !important;
+        width: 100%;
+        overflow: hidden;
+        vertical-align: baseline;
+    }
+    
+    #mainCarousel {
         position: relative;
         height: auto;
         width: 100%;
         overflow: hidden;
         vertical-align: baseline;
     }
+    
+    .slider .indicators .indicator-item.active {
+        background-color: #ffffff;
+    }
+    
+    .slider {
+        width: 100%;
+        height: auto;
+    }
 </style>
 {% endblock %}
-<div class="row">
-    <div class="carousel carousel-slider" id="events" data-indicators="true">
-        <!--<a class="carousel-item" href="#one!"><img src="{% static 'images/a.jpg' %}" class="responsive-img"></a>-->
-        <!--Events Images-->
+
+
+
+<!--Main Carousel-->
+<!--<div class="carousel carousel-slider" id="mainCarousel" data-indicators="true">
         <a class="carousel-item" href="#two!"><img src="{% static 'images/b.jpg' %}" class="responsive-img"></a>
-    </div>
-</div>
+    </div>-->
+
+
+
+
 
 
 <!-- Not rendered-->
-
+<!--
 <div class="row">
-    <img src="{% static 'images/pic8.jpg' %}" />
-</div>
+    <img src="{% static 'images/try.jpg' %}" />
+</div>-->
 
-<!--             -->
+<!-- Not rendered -->
 
 <div class="row panel">
-    <img src="{% static 'images/sample4.png' %}" />
-    <!--</div>-->
-    <p style="text-align: center; font-family:'Lato',serif; font-size:30px">
-        It's not about ideas, It's about making ideas happen. Text to be added.
-    </p>
+    <br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br />
 </div>
+
+
 <div class="row">
-    <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
-    <div class="col s12 m8 ">
-        <div class="carousel carousel-slider" id="testimonials" data-indicators="true">
-            <div class="carousel-item" href="#one!">
-                <img src="http://lorempixel.com/800/400" class="responsive-img">
-                <!--Testimonials in img form-->
+    <div class="col-sm-12 col-md-offset-0 " id="gallery" style="padding-bottom: 10px; margin-bottom: 10px;">
+        <div class="row">
+
+            <!-- ITEM -->
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/transport" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item" href="#two!">
-                <img src="http://lorempixel.com/800/400" class="responsive-img">
+
+
+            <!-- ITEM -->
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/cats" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ITEM -->
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/technics" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/nature" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/city" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/abstract" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/food" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 plr-0 lightbox-item">
+                <a href="#">
+                    <div class="port-img-overlay">
+                        <img class="port-main-img" src="http://lorempixel.com/300/200/sports" alt="img">
+                    </div>
+                </a>
+                <div class="port-overlay-cont">
+                    <a href="#">
+                    </a>
+                    <div class="port-btn-cont">
+                        <a href="#"> Text
+                    </a>
+                        <a href="#" class="lightbox mr-20">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        $(document).ready(function() {
-            $('.carousel').carousel();
-            // insert calender events, etc using this function
-            $('#calendar').fullCalendar({});
-        });
-        $('.carousel.carousel-slider').carousel({
-            fullWidth: true
-        });
-        //AutoScroll for events
-        autoplay1();
 
-        function autoplay1() {
-            $('#events').carousel('next');
-            setTimeout(autoplay1, 4000);
-        }
+<div class="row">
+    <!--Calendar-->
+    <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
+    <div class="col s12 m8 panel">
+        <br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br />
+    </div>
 
-        //AutoScroll for testimonials
-        autoplay2()
 
-        function autoplay2() {
-            $('#testimonials').carousel('next');
-            setTimeout(autoplay2, 5000);
-        }
-    </script>
+</div>
+
+<!--Testimonials Carousel-->
+<!--<div class="col s12 m12 ">
+    <div class="carousel carousel-slider" id="testimonials" data-indicators="true">
+        <div class="carousel-item" href="#one!">
+            <img src="{% static 'images/b.jpg' %}" class="responsive-img">
+        </div>
+        <div class="carousel-item" href="#two!">
+            <img src="{% static 'images/b.jpg' %}" class="responsive-img">
+        </div>
+    </div>
+</div>-->
+
+<script>
+    $(document).ready(function() {
+        // insert calender events, etc using this function
+        $('#calendar').fullCalendar({});
+        $('.slider').slider();
+    });
+
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true
+    });
+    //AutoScroll for events
+    autoplay1();
+
+    function autoplay1() {
+        $('#mainCarousel').carousel('next');
+        setTimeout(autoplay1, 4000);
+    }
+
+    //AutoScroll for testimonials
+    autoplay2()
+
+    function autoplay2() {
+        $('#testimonials').carousel('next');
+        setTimeout(autoplay2, 5000);
+    }
+    //     <div class="row">
+    //     <div class="slider">
+    //         <ul class="slides">
+    //             <li>
+    //                 <img src="https://lorempixel.com/1440/400/nature/1">
+    //                 <!-- random image -->
+    //                 <div class="caption center-align">
+    //                     <h3>This is our big Tagline!</h3>
+    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    //                 </div>
+    //             </li>
+    //             <li>
+    //                 <img src="https://lorempixel.com/1440/400/nature/2">
+    //                 <!-- random image -->
+    //                 <div class="caption left-align">
+    //                     <h3>Left Aligned Caption</h3>
+    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    //                 </div>
+    //             </li>
+    //             <li>
+    //                 <img src="https://lorempixel.com/1440/400/nature/3">
+    //                 <!-- random image -->
+    //                 <div class="caption right-align">
+    //                     <h3>Right Aligned Caption</h3>
+    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    //                 </div>
+    //             </li>
+    //             <li>
+    //                 <img src="https://lorempixel.com/1440/400/nature/4">
+    //                 <!-- random image -->
+    //                 <div class="caption center-align">
+    //                     <h3>This is our big Tagline!</h3>
+    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    //                 </div>
+    //             </li>
+    //         </ul>
+    //     </div>
+    // </div>
+</script>
 </div>
 {% endblock %}
