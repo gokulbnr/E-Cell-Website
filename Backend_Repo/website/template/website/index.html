@@ -4,9 +4,22 @@
 <script src="{% static 'js/moment.js' %}"></script>
 <link href="{% static 'css/calendar.css' %}" type="text/css" rel="stylesheet">
 <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet">
+<link href="{% static 'css/flexslider.css' %}" type="text/css" rel="stylesheet">
 <script src="{% static 'js/calendar.js' %}"></script>
 
 {% endblock %} {% block styles %}
+
+<style>
+    .bg_white {
+        background: white !important;
+    }
+    
+    .line_height>span>p {
+        background: #484848;
+        color: white;
+        display: inline-block;
+    }
+</style>
 <style>
     #events,
     #testimonials {
@@ -16,45 +29,120 @@
         overflow: hidden;
         vertical-align: baseline;
     }
-
-    #mainCarousel {
-        position: relative;
-        height: auto;
-        width: 100%;
-        overflow: hidden;
-        vertical-align: baseline;
-    }
-
-    .slider .indicators .indicator-item.active {
-        background-color: #ffffff;
-    }
-
-    .slider {
-        width: 100%;
-        height: auto;
-    }
 </style>
 {% endblock %}
 
+<img src="{% static 'images/thinindexheader.png' %}" />
 
+<!-- FLEX SLIDER -->
+<div class="head">
+    <div class="slider-1 clearfix">
 
-<!--Main Carousel-->
-<div class="carousel carousel-slider" id="mainCarousel" data-indicators="true">
-        <a class="carousel-item" href="#two!"><img src="{% static 'images/b.jpg' %}" class="responsive-img"></a>
+        <div class="flex-container">
+            <div class="flexslider">
+                <ul class="slides">
+
+                    <!-- SLIDE 1 -->
+                    <li style="background: url(&quot;{% static 'images/megathon.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+
+                        <div class="container">
+                            <div class="sixteen columns contain">
+                                <h2 data-toptitle="49%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 49%; left: 0px; opacity: 0;">
+                                    <span class="bold">
+													  <p>
+															MEGATHON 2.0
+														</p>
+													</span>
+                                </h2>
+                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
+
+                            </div>
+                        </div>
+                        <!-- End Container -->
+
+                    </li>
+                    <!-- End item -->
+
+                    <!-- SLIDE 2 -->
+                    <li style="background: url(&quot;{% static 'images/pic8.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
+
+                        <div class="container">
+                            <div class="sixteen columns contain">
+                                <h2 data-toptitle="28%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 28%; left: 0px; opacity: 1;">
+                                    <span class="bold">
+														<p>IIIT</p><br>
+														<p>HYDERABAD</p><br>
+														<p>STARTUPS</p><br>
+													</span>
+                                </h2>
+                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: 30%; left: 0px; opacity: 1;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
+                            </div>
+                        </div>
+                        <!-- End Container -->
+
+                    </li>
+                    <!-- End item -->
+
+                    <!-- SLIDE 3 -->
+                    <li style="background: url(&quot;{% static 'images/fairposter.png' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+
+                        <div class="container">
+                            <div class="sixteen columns contain">
+                                <h2 data-toptitle="19%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 19%; left: 0px; opacity: 0;">
+                                    <span class="bold">
+														<p>THIS</p><br>	
+														<p>IS A</p><br>	
+														<p>SAMPLE</p><br>	
+														<p>TEXT</p>
+													</span>
+                                </h2>
+                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
+                            </div>
+                        </div>
+                        <!-- End Container -->
+
+                    </li>
+                    <!-- End item -->
+
+                    <!-- SLIDE 4 -->
+                    <li style="background: url(&quot;{% static 'images/slidepic.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+
+                        <div class="container">
+                            <div class="sixteen columns contain">
+                                <h2 data-toptitle="28%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: grey; top: 28%; left: 0px; opacity: 0;">
+                                    <span class="bold">
+														<p>IIIT-H'S</p><br>
+														<p>ENTREPRENEURSHIP</p><br>
+														<p>SUMMIT</p>
+													</span>
+                                </h2>
+                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button grey bg_white" href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">KNOW MORE</a></p>
+
+                            </div>
+                        </div>
+                        <!-- End Container -->
+
+                    </li>
+                </ul>
+            </div>
+            <ul class="flex-direction-nav">
+                <li class="flex-nav-prev">
+                    <a class="flex-prev" href="http://ecell-iitkgp.org/#"></a>
+                </li>
+                <li class="flex-nav-next">
+                    <a class="flex-next" href="http://ecell-iitkgp.org/#"></a>
+                </li>
+            </ul>
+        </div>
+
     </div>
+    <!-- End slider -->
+</div>
 
 
 
 
 
-
-<!-- Not rendered-->
-<!--
-<div class="row">
-    <img src="{% static 'images/try.jpg' %}" />
-</div>-->
-
-<!-- Not rendered -->
 
 <div class="row panel">
     <br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br />
@@ -230,7 +318,7 @@
 </div>
 
 <!--Testimonials Carousel-->
-<!--<div class="col s12 m12 ">
+<div class="col s12 m12 ">
     <div class="carousel carousel-slider" id="testimonials" data-indicators="true">
         <div class="carousel-item" href="#one!">
             <img src="{% static 'images/b.jpg' %}" class="responsive-img">
@@ -239,7 +327,31 @@
             <img src="{% static 'images/b.jpg' %}" class="responsive-img">
         </div>
     </div>
-</div>-->
+</div>
+
+
+
+<!-- JS begin -->
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<!-- MAGNIFIC POPUP -->
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+<!-- PORTFOLIO SCRIPTS -->
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+
+
+<!-- APPEAR -->
+<script src="{% static 'js/jquery.appear.js' %}"></script>
+
+
+<!-- FLEX SLIDER SCRIPTS  -->
+<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'js/flex-slider.js' %}"></script>
+
 
 <script>
     $(document).ready(function() {
@@ -266,44 +378,6 @@
         $('#testimonials').carousel('next');
         setTimeout(autoplay2, 5000);
     }
-    //     <div class="row">
-    //     <div class="slider">
-    //         <ul class="slides">
-    //             <li>
-    //                 <img src="https://lorempixel.com/1440/400/nature/1">
-    //                 <!-- random image -->
-    //                 <div class="caption center-align">
-    //                     <h3>This is our big Tagline!</h3>
-    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    //                 </div>
-    //             </li>
-    //             <li>
-    //                 <img src="https://lorempixel.com/1440/400/nature/2">
-    //                 <!-- random image -->
-    //                 <div class="caption left-align">
-    //                     <h3>Left Aligned Caption</h3>
-    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    //                 </div>
-    //             </li>
-    //             <li>
-    //                 <img src="https://lorempixel.com/1440/400/nature/3">
-    //                 <!-- random image -->
-    //                 <div class="caption right-align">
-    //                     <h3>Right Aligned Caption</h3>
-    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    //                 </div>
-    //             </li>
-    //             <li>
-    //                 <img src="https://lorempixel.com/1440/400/nature/4">
-    //                 <!-- random image -->
-    //                 <div class="caption center-align">
-    //                     <h3>This is our big Tagline!</h3>
-    //                     <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    //                 </div>
-    //             </li>
-    //         </ul>
-    //     </div>
-    // </div>
 </script>
 </div>
 {% endblock %}
