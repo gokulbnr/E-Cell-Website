@@ -88,7 +88,7 @@ html[xmlns] .slides{
 	right:0;
 } 
 .flex-direction-nav li .flex-next:before{
-  content: "\e232";
+  content: "❯";
   font-family: "linea-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -103,7 +103,7 @@ html[xmlns] .slides{
 	left:0;
 }
 .flex-direction-nav li .flex-prev:before{
-  content: "\e226";
+  content: "❮";
   font-family: "linea-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
