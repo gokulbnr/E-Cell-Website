@@ -24,6 +24,8 @@
             <div class="card-content profile-data center" style=" height: 9em; padding: 1em!important;font-size: 15px;">
                 <img class="profile-img center" height="100" style="margin-top:-5em;" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
                 <div class="person-name card-title">{{ instance.firstName }} {{ instance.lastName }}</div>
+                <div class="person-position">{{ p.position }}</div>
+                <div class="person-contact-number">{{ p.phoneNo }}</div>
             </div>
             <div class="center person-contact-details" style="height: 5em;">
                 <div class="row">
