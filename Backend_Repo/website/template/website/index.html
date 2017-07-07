@@ -19,8 +19,13 @@
         color: white;
         display: inline-block;
     }
-</style>
-<style>
+    
+    .index-round-image {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
     #events,
     #testimonials {
         position: relative;
@@ -28,6 +33,19 @@
         width: 100%;
         overflow: hidden;
         vertical-align: baseline;
+    }
+    
+    .news-title {
+        font-family: 'Open Sans';
+        font-size: 20px;
+        font-weight: 600px;
+        color: chocolate;
+    }
+    
+    .news-content {
+        font-family: 'Open Sans';
+        font-size: 15px;
+        text-align: justify;
     }
 </style>
 {% endblock %}
@@ -124,9 +142,9 @@
 
                     </li>
                 </ul>
-              
+
             </div>
-            
+
         </div>
 
     </div>
@@ -134,13 +152,47 @@
 </div>
 
 
+<br /><br /><br /><br />
 
+<!--'Who Are We?' Section-->
 
-
-
-<div class="row panel">
-    <br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br />
+<div class="row animated slideInLeft">
+    <div class="col-md-2"> </div>
+    <div class="col-md-8" style="font-family:'Abril Fatface', cursive; color:black; font-weight:800; font-size:50px">WHO ARE WE? </div>
+    <div class="col-md-2"> </div>
 </div>
+<br />
+<div class="row animated slideInRight">
+    <div class="col-md-2"> </div>
+    <div class="col-md-8" style="font-family:'Open Sans', sans-serif; color:black; font-weight:500; text-align:justify; font-size:20px">
+        Entrepreneurship Cell, IIIT Hyderabad is a non-profit organization run by students, and has been established with the objective of creating, manifesting and guiding the entrepreneurial spirit in the student community and to encourage them to be successful
+        entrepreneurs.
+    </div>
+    <div class="col-md-2"> </div>
+</div>
+
+<br /><br /><br />
+
+<div class="row animated fadeIn">
+
+    <div class="col-md-3 index-round-image"> <img src="{% static 'images/talk.jpg'%}" style=" height:150px; width:150px; border-radius:100%" /> </div>
+    <div class="col-md-3 index-round-image"> <img src="{% static 'images/hackathon.jpg'%}" style="height:150px; width:150px; border-radius:100%" /></div>
+    <div class="col-md-3 index-round-image"> <img src="{% static 'images/workshop.jpg'%}" style="height:150px; width:150px; border-radius:100%" /></div>
+    <div class="col-md-3 index-round-image"> <img src="{% static 'images/success.jpg'%}" style="height:150px; width:150px; border-radius:100%" /></div>
+
+</div>
+
+<div class="row animated fadeIn">
+    <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Talks</div>
+    <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Hackathons</div>
+    <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Workshops</div>
+    <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Innovation</div>
+</div>
+
+<br /><br /><br />
+
+
+<!--Pseudo Gallery-->
 
 
 <div class="row">
@@ -304,10 +356,38 @@
 <div class="row">
     <!--Calendar-->
     <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
-    <div class="col s12 m8 panel">
-        <br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br />
-    </div>
 
+    <!--News-->
+
+    <div class="col m1"> </div>
+    <div class="col s12 m6">
+        <div style="font-family:'Lato', cursive; font-weight:800; font-size:30px; "> E-Resources:</div>
+        <hr width="100%" />
+        <div style=" max-height:300px; min-height:300px; overflow:auto">
+            <div class="new-element">
+                <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretiumquis, sem. Nulla consequat massa</div>
+            </div>
+            <div class="new-element">
+                <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretiumquis, sem. Nulla consequat massa</div>
+            </div>
+            <div class="new-element">
+                <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretiumquis, sem. Nulla consequat massa</div>
+            </div>
+            <div class="new-element">
+                <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretiumquis, sem. Nulla consequat massa</div>
+            </div>
+        </div>
+        <hr width="100%" />
+    </div>
+    <div class="col m1"> </div>
 
 </div>
 
