@@ -1,492 +1,479 @@
-{% extends "website/base.html" %} {% block main %}{% load staticfiles %} {% block links %}
-
-
+{% extends "website/base.html" %}
+{% load staticfiles %} 
+{% block links %}
 <script src="{% static 'js/moment.js' %}"></script>
 <link href="{% static 'css/calendar.css' %}" type="text/css" rel="stylesheet">
 <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet">
 <link href="{% static 'css/flexslider.css' %}" type="text/css" rel="stylesheet">
 <script src="{% static 'js/calendar.js' %}"></script>
-
-{% endblock %} {% block styles %}
-
+<script>
+	$(document).ready(function(){
+		$('.collapsible').collapsible();
+		$('.collapsible-header').addClass('active');
+	});
+</script>
+{% endblock %} 
+{% block styles %}
 <style>
-    .bg_white {
-        background: white !important;
-    }
-    
-    .line_height>span>p {
-        background: #484848;
-        color: white;
-        display: inline-block;
-    }
-    
-    .index-round-image {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
-    
-    #events,
-    #testimonials {
-        position: relative;
-        max-height: 200px !important;
-        width: 100%;
-        overflow: hidden;
-        vertical-align: baseline;
-    }
-    
-    .news-title {
-        font-family: 'Open Sans';
-        font-size: 20px;
-        font-weight: 600px;
-        color: chocolate;
-    }
-    
-    .news-content {
-        font-family: 'Open Sans';
-        font-size: 15px;
-        text-align: justify;
-    }
+	.container {
+		width: 100%;
+	}
+	.bg_white {
+		background: white !important;
+	}
+
+	.line_height>span>p {
+		background: #484848;
+		color: white;
+		display: inline-block;
+	}
+
+	.index-round-image {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	#events,
+	#testimonials {
+		position: relative;
+		max-height: 200px !important;
+		width: 100%;
+		overflow: hidden;
+		vertical-align: baseline;
+	}
+
+	.news-title {
+		font-family: 'Open Sans';
+		font-size: 20px;
+		font-weight: 600px;
+		color: chocolate;
+	}
+
+	.news-content {
+		font-family: 'Open Sans';
+		font-size: 15px;
+		text-align: justify;
+	}
 </style>
 {% endblock %}
-
-<!-- FLEX SLIDER -->
-<div class="head">
-    <div class="slider-1 clearfix">
-
-        <div class="flex-container">
-            <div class="flexslider">
-                <ul class="slides">
-
-                    <!-- SLIDE 1 -->
-                    <li style="background: url(&quot;{% static 'images/megathon.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-
-                        <div class="container">
-                            <div class="sixteen columns contain">
-                                <h2 data-toptitle="49%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 49%; left: 0px; opacity: 0;">
-                                    <span class="bold">
-													  <p>
-															MEGATHON 2.0
-														</p>
-													</span>
-                                </h2>
-                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
-
-                            </div>
-                        </div>
-                        <!-- End Container -->
-
-                    </li>
-                    <!-- End item -->
-
-                    <!-- SLIDE 2 -->
-                    <li style="background: url(&quot;{% static 'images/pic8.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
-
-                        <div class="container">
-                            <div class="sixteen columns contain">
-                                <h2 data-toptitle="28%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 28%; left: 0px; opacity: 1;">
-                                    <span class="bold">
-														<p>IIIT</p><br>
-														<p>HYDERABAD</p><br>
-														<p>STARTUPS</p><br>
-													</span>
-                                </h2>
-                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: 30%; left: 0px; opacity: 1;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
-                            </div>
-                        </div>
-                        <!-- End Container -->
-
-                    </li>
-                    <!-- End item -->
-
-                    <!-- SLIDE 3 -->
-                    <li style="background: url(&quot;{% static 'images/fairposter.png' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-
-                        <div class="container">
-                            <div class="sixteen columns contain">
-                                <h2 data-toptitle="19%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 19%; left: 0px; opacity: 0;">
-                                    <span class="bold">
-														<p>THIS</p><br>	
-														<p>IS A</p><br>	
-														<p>SAMPLE</p><br>	
-														<p>TEXT</p>
-													</span>
-                                </h2>
-                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
-                            </div>
-                        </div>
-                        <!-- End Container -->
-
-                    </li>
-                    <!-- End item -->
-
-                    <!-- SLIDE 4 -->
-                    <li style="background: url(&quot;{% static 'images/slidepic.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-
-                        <div class="container">
-                            <div class="sixteen columns contain">
-                                <h2 data-toptitle="28%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: grey; top: 28%; left: 0px; opacity: 0;">
-                                    <span class="bold">
-														<p>IIIT-H'S</p><br>
-														<p>ENTREPRENEURSHIP</p><br>
-														<p>SUMMIT</p>
-													</span>
-                                </h2>
-                                <p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button grey bg_white" href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">KNOW MORE</a></p>
-
-                            </div>
-                        </div>
-                        <!-- End Container -->
-
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- End slider -->
-</div>
-
-
-<br /><br /><br /><br />
-
-<!--'Who Are We?' Section-->
-
-<div class="row animated slideInLeft">
-    <div class="col-md-2"> </div>
-    <div class="col-md-8" style="font-family:'Abril Fatface', cursive; color:black; font-weight:800; font-size:50px">WHO ARE WE? </div>
-    <div class="col-md-2"> </div>
-</div>
-<br />
-<div class="row animated slideInRight">
-    <div class="col-md-2"> </div>
-    <div class="col-md-8" style="font-family:'Open Sans', sans-serif; color:black; font-weight:500; text-align:justify; font-size:20px">
-        Entrepreneurship Cell, IIIT Hyderabad is a non-profit organization run by students, and has been established with the objective of creating, manifesting and guiding the entrepreneurial spirit in the student community and to encourage them to be successful
-        entrepreneurs.
-    </div>
-    <div class="col-md-2"> </div>
-</div>
-
-<br /><br /><br />
-
-<div class="row animated fadeIn">
-
-    <a href="#">
-        <div class="col-md-3 index-round-image"> <img src="{% static 'images/talk.jpg'%}" style=" height:150px; width:150px; border-radius:100%" /> </div>
-    </a>
-    <a href="#">
-        <div class="col-md-3 index-round-image"> <img src="{% static 'images/hackathon.jpg'%}" style="height:150px; width:150px; border-radius:100%" /></div>
-    </a>
-    <a href="#">
-        <div class="col-md-3 index-round-image"> <img src="{% static 'images/workshop.jpg'%}" style="height:150px; width:150px; border-radius:100%" /></div>
-    </a>
-    <a href="#">
-        <div class="col-md-3 index-round-image"> <img src="{% static 'images/success.jpg'%}" style="height:150px; width:150px; border-radius:100%" /></div>
-    </a>
-
-</div>
-
-<div class="row animated fadeIn">
-    <a href="#">
-        <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Talks</div>
-    </a>
-    <a href="#">
-        <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Hackathons</div>
-    </a>
-    <a href="#">
-        <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Workshops</div>
-    </a>
-    <a href="#">
-        <div class="col-md-3 index-round-image" style="font-family:'Open Sans', sans-serif; font-size:25px; font-weight:800; color:black">Innovation</div>
-    </a>
-</div>
-
-<br /><br /><br />
-
-
-<!--Pseudo Gallery-->
-
-
-<div class="row">
-    <div class="col-sm-12 col-md-offset-0 " id="gallery" style="padding-bottom: 10px; margin-bottom: 10px;">
-        <div class="row">
-
-            <!-- ITEM -->
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/transport" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- ITEM -->
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/cats" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- ITEM -->
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/technics" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/nature" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/city" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/abstract" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/food" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 plr-0 lightbox-item">
-                <a href="#">
-                    <div class="port-img-overlay">
-                        <img class="port-main-img" src="http://lorempixel.com/300/200/sports" alt="img">
-                    </div>
-                </a>
-                <div class="port-overlay-cont">
-                    <a href="#">
-                    </a>
-                    <div class="port-btn-cont">
-                        <a href="#"> Text
-                    </a>
-                        <a href="#" class="lightbox mr-20">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Updates Section-->
-
-<div class="row">
-    <div class="col-md-1 news-title">
-        Updates :
-    </div>
-    <div class="col-md-10 news-content">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretiumquis,
-        sem. Nulla consequat massa
-    </div>
-</div>
-
-<br />
-<!--Calendar and E-Resources-->
-
-<div class="row">
-    <!--Calendar-->
-    <div class="col s12 m4 card-panel transparent z-depth-2 hide-on-med-and-down" id="calendar"></div>
-
-    <!--News-->
-
-    <div class="col m1"> </div>
-    <div class="col s12 m6">
-        <div style="font-family:'Play', cursive; font-weight:800; font-size:30px; "> E-Resources:</div>
-        <hr width="100%" />
-        <div style=" max-height:300px; min-height:300px; overflow:auto">
-            <div class="new-element">
-                <a href="#">
-                    <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
-                </a>
-                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                    eu, pretiumquis, sem. Nulla consequat massa</div>
-            </div>
-            <div class="new-element">
-                <a href="#">
-                    <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
-                </a>
-                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                    eu, pretiumquis, sem. Nulla consequat massa</div>
-            </div>
-            <div class="new-element">
-                <a href="#">
-                    <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
-                </a>
-                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                    eu, pretiumquis, sem. Nulla consequat massa</div>
-            </div>
-            <div class="new-element">
-                <a href="#">
-                    <div class="news-title"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
-                </a>
-                <div class="news-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                    eu, pretiumquis, sem. Nulla consequat massa</div>
-            </div>
-        </div>
-        <hr width="100%" />
-    </div>
-    <div class="col m1"> </div>
-
-</div>
-
-<!--Testimonials Carousel-->
-<div class="col s12 m12 ">
-    <div class="carousel carousel-slider" id="testimonials" data-indicators="true">
-        <div class="carousel-item" href="#one!">
-            <img src="{% static 'images/b.jpg' %}" class="responsive-img">
-        </div>
-        <div class="carousel-item" href="#two!">
-            <img src="{% static 'images/b.jpg' %}" class="responsive-img">
-        </div>
-    </div>
-</div>
-
-
-
-<!-- JS begin -->
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-<!-- MAGNIFIC POPUP -->
-<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-
-<!-- PORTFOLIO SCRIPTS -->
-<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
-<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
-
-
-<!-- APPEAR -->
-<script src="{% static 'js/jquery.appear.js' %}"></script>
-
-
-<!-- FLEX SLIDER SCRIPTS  -->
-<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-<script src="{% static 'js/flex-slider.js' %}"></script>
-
-
-<script>
-    $(document).ready(function() {
+{% block main %}
+<div class="container">
+	<!-- FLEX SLIDER -->
+	<div class="head">
+		<div class="slider-1 clearfix">
+			<div class="flex-container">
+				<div class="flexslider">
+					<ul class="slides">
+						<!-- SLIDE 1 -->
+						<li style="background: url(&quot;{% static 'images/megathon.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+
+							<div class="container">
+								<div class="sixteen columns contain">
+									<h2 data-toptitle="49%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 49%; left: 0px; opacity: 0;">
+										<span class="bold">
+											<p>
+												MEGATHON 2.0
+											</p>
+										</span>
+									</h2>
+									<p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
+
+								</div>
+							</div>
+							<!-- End Container -->
+
+						</li>
+						<!-- End item -->
+						<!-- SLIDE 2 -->
+						<li style="background: url(&quot;{% static 'images/pic8.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
+
+							<div class="container">
+								<div class="sixteen columns contain">
+									<h2 data-toptitle="28%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 28%; left: 0px; opacity: 1;">
+										<span class="bold">
+											<p>IIIT</p><br>
+											<p>HYDERABAD</p><br>
+											<p>STARTUPS</p><br>
+										</span>
+									</h2>
+									<p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: 30%; left: 0px; opacity: 1;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
+								</div>
+							</div>
+							<!-- End Container -->
+						</li>
+						<!-- End item -->
+						<!-- SLIDE 3 -->
+						<li style="background: url(&quot;{% static 'images/fairposter.png' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+
+							<div class="container">
+								<div class="sixteen columns contain">
+									<h2 data-toptitle="19%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: rgb(25, 75, 174); top: 19%; left: 0px; opacity: 0;">
+										<span class="bold">
+											<p>THIS</p><br> 
+											<p>IS A</p><br> 
+											<p>SAMPLE</p><br>   
+											<p>TEXT</p>
+										</span>
+									</h2>
+									<p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button blue bg_white" href="#">KNOW MORE</a></p>
+								</div>
+							</div>
+							<!-- End Container -->
+						</li>
+						<!-- End item -->
+
+						<li style="background: url(&quot;{% static 'images/slidepic.jpg' %}&quot;) 50% 0px / cover no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+
+							<div class="container">
+								<div class="sixteen columns contain">
+									<h2 data-toptitle="28%" class="norm-50-wide norm-40-768-959 font-light top-28-767 flex-top-bot line_height" style="color: grey; top: 28%; left: 0px; opacity: 0;">
+										<span class="bold">
+											<p>IIIT-H'S</p><br>
+											<p>ENTREPRENEURSHIP</p><br>
+											<p>SUMMIT</p>
+										</span>
+									</h2>
+									<p data-bottomtext="30%" class="bot-15-767 flex-bot-top" style="bottom: -50%; left: 0px; opacity: 0;"><a class="button medium thin hover-dark tp-button grey bg_white" href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">KNOW MORE</a></p>
+
+								</div>
+							</div>
+							<!-- End Container -->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End slider -->
+	</div>
+	<div class="divider"></div>
+	<!--'Who Are We?' Section-->
+	<div class="row" id="who-are" onfocus="$('#who-are').addClass('animated fadeIn');">
+		<h3>WHO ARE WE?</h3>
+	</div>
+	<div class="row animated slideInRight">
+		<span class="flow-text">
+			Entrepreneurship Cell, IIIT Hyderabad is a non-profit organization run by students, and has been established with the objective of creating, manifesting and guiding the entrepreneurial spirit in the student community and to encourage them to be successful
+			entrepreneurs.
+		</span>
+	</div>
+	<div class="row animated fadeIn">
+		<a href="#">
+			<div class="col s12 m3">
+				<div class="card-panel hoverable">
+					<img src="{% static 'images/talk.jpg'%}" class="responsive-img circle"/>
+					<div class="center-align"><h2><strong>Talks</strong></h2></div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="col s12 m3">
+				<div class="card-panel hoverable">
+					<img src="{% static 'images/hackathon.jpg'%}" class="responsive-img circle"/>
+					<div class="center-align"><h2><strong>Hackathons</strong></h2></div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="col s12 m3">
+				<div class="card-panel hoverable">
+					<img src="{% static 'images/workshop.jpg'%}" class="responsive-img circle"/>
+					<div class="center-align"><h2><strong>Workshops</strong></h2></div>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="col s12 m3">
+				<div class="card-panel hoverable">
+					<img src="{% static 'images/success.jpg'%}" class="responsive-img circle"/>
+					<div class="center-align"><h2><strong>Innovation</strong></h2></div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="divider"></div>
+	<!--Pseudo Gallery-->
+	<div class="row">
+		<h2>Gallery</h2>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-offset-0 " id="gallery" style="padding-bottom: 10px; margin-bottom: 10px;">
+			<div class="row">
+				<!-- ITEM -->
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/transport" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- ITEM -->
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/cats" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- ITEM -->
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/technics" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/nature" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/city" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/abstract" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/food" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 plr-0 lightbox-item">
+					<a href="#">
+						<div class="port-img-overlay">
+							<img class="port-main-img" src="http://lorempixel.com/300/200/sports" alt="img">
+						</div>
+					</a>
+					<div class="port-overlay-cont">
+						<a href="#">
+						</a>
+						<div class="port-btn-cont">
+							<a href="#"> Text
+							</a>
+							<a href="#" class="lightbox mr-20">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<!--Updates Section-->
+	<div class="row">
+		<div class="col s1"><span class="flow-text orange-text">Updates</span></div>
+		<div class="col s11">
+			<p class="grey-text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<!--Calendar-->
+		<div class="col s12 m6">
+			<div class="card-panel">
+				<div id="calendar"></div>
+			</div>
+		</div>
+		<div class="divider hide-on-med-and-up"></div>
+		<!--News-->
+		<div class="col s12 m6">
+			<div style="font-family:'Play', cursive; font-weight:800; font-size:30px;"> E-Resources:</div>
+			<div class="divider"></div>
+			<ul class="collapsible popout" data-collapsible="expandable">
+				<li>
+					<div class="collapsible-header orange-text text-darken-2 active">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+					<div class="collapsible-body">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header orange-text text-darken-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+					<div class="collapsible-body">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header orange-text text-darken-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</div>
+					<div class="collapsible-body">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="divider"></div>
+		<div class="row">
+			<h3>Testimonials</h3>
+		</div>
+		<!--Testimonials Carousel-->
+		<div class="row">
+			<div class="carousel carousel-slider" id="testimonials" data-indicators="true">
+				<div class="carousel-item" href="#one!">
+					<img src="{% static 'images/b.jpg' %}" class="responsive-img">
+				</div>
+				<div class="carousel-item" href="#two!">
+					<img src="{% static 'images/b.jpg' %}" class="responsive-img">
+				</div>
+			</div>
+		</div>
+
+
+
+	<!-- JS begin -->
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+	<!-- MAGNIFIC POPUP -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+	<!-- PORTFOLIO SCRIPTS -->
+	<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+
+
+	<!-- APPEAR -->
+	<script src="{% static 'js/jquery.appear.js' %}"></script>
+
+
+	<!-- FLEX SLIDER SCRIPTS  -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<script src="{% static 'js/flex-slider.js' %}"></script>
+
+
+	<script>
+		$(document).ready(function() {
         // insert calender events, etc using this function
         $('#calendar').fullCalendar({});
         $('.slider').slider();
     });
 
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true
-    });
+		$('.carousel.carousel-slider').carousel({
+			fullWidth: true
+		});
     //AutoScroll for events
     autoplay1();
 
     function autoplay1() {
-        $('#mainCarousel').carousel('next');
-        setTimeout(autoplay1, 4000);
+    	$('#mainCarousel').carousel('next');
+    	setTimeout(autoplay1, 4000);
     }
 
     //AutoScroll for testimonials
     autoplay2()
 
     function autoplay2() {
-        $('#testimonials').carousel('next');
-        setTimeout(autoplay2, 5000);
+    	$('#testimonials').carousel('next');
+    	setTimeout(autoplay2, 5000);
     }
 </script>
 </div>
