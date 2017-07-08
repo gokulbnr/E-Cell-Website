@@ -21,7 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- fonts and icons -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Play|Open+Sans|Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="{% static 'images/logo-ecell.png' %}">
 
@@ -58,6 +58,13 @@
             vertical-align: middle;
             text-align: center;
         }
+        /*Not working for some probably stupid reason */
+        /*.defaut-title {
+            font-family: 'Play', sans-serif;
+            font-size: 60px;
+            color: #000000;
+            font-weight: 600px;
+        }*/
     </style>
 
     <!-- other page specific styles -->
@@ -104,8 +111,7 @@
         </ul>
     </header>
     <main>
-        <img class="img-responsive" src="{% static 'images/thinindexheader.png' %}" />
-        {% block main %} {% endblock %}
+        <img class="img-responsive" src="{% static 'images/thinindexheader.png' %}" /> {% block main %} {% endblock %}
     </main>
     <footer class="page-footer black">
         <div class="container">
