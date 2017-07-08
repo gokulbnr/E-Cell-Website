@@ -1,4 +1,4 @@
-{% extends "website/base.html" %} {% load static %} {% block main %}{% load staticfiles %} {% block styles %}
+{% extends "website/base.html" %} {% load static %} {% block main %}{% load staticfiles %}
 <style>
     tr,
     td,
@@ -6,26 +6,26 @@
         text-align: center;
     }
 </style>
-{% endblock %}
-<div class="row">
-    <img src="{% static 'images/sample4.png' %}" />
+
+<div class="col-md-12 animated fadeIn">
+    <h1 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp;Core Team </h1>
+</div>
 </div>
 <div class="panel panel-default ">
-    <div class="col-md-12 animated fadeIn">
-        <h1 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp;Core Team </h1>
-    </div>
     <div class="row " style="margin-left: 35px;">
         <br />
         <!--<div class="panel panel-default">-->
         {% for instance in person %}
-        <div class="col m5 card card-main white-text blue-grey darken-2" style="width: 14em; margin: 0.5em 0.5em 1em 0.5em;">
+        <div class="col m5 card card-main white-text blue-grey darken-2;font-family:'Open Sans', sans-serif" style="width: 14em; margin: 0.5em 0.5em 1em 0.5em;">
             <div class="empty blue-grey lighten-3" style="height: 5.3em;margin: 0em -0.8em 0em -0.8em;"></div>
-            <div class="card-content profile-data center" style=" height: 9em; padding: 1em!important;font-size: 15px;">
+            <div class="row card-content profile-data center" style=" height: 9em; padding: 1em!important;font-size: 15px;">
                 <img class="profile-img center" height="100" style="margin-top:-5em;" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
                 <div class="person-name card-title">{{ instance.firstName }} {{ instance.lastName }}</div>
+                <div class="person-role">{{ instance.position }}</div>
             </div>
             <div class="center person-contact-details" style="height: 5em;">
                 <div class="row">
+                <div style="font-family:'Lato',serif; font-size:12px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</div>
                     <a href="mailto:{{ instance.email }}" class="waves-effect email btn col s3 offset-s1"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                     <a href="{{ instance.fb }}" class="waves-effect facebook-link btn col s3 offset-s1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="{{ instance.linkedin }}" class="waves-effect linkedin-link btn col s3 offset-s1"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -34,27 +34,30 @@
         </div>
         {% endfor %}
     </div>
-    <div>
-        <h3 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp; Get in Touch </h3>
-    </div>
-    <div class="row" style=" margin-left: 35px; ">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Contact No</th>
-                    <th colspan="2">Social Media</th>
-                    <th>Work Position</th>
-                </tr>
-            </thead>
-            <tbody style="text-align: center;">
-                {% for p in person %}
-                <tr>
-                    <td>{{ p.firstName }} {{ p.lastName }}</td>
-                    <td>{{ p.email }}</td>
-                    <td>{{ p.phoneNo }}</td>
-                    <td><a href="{{ p.fb }}" target="_blank"><i class="fa fa-facebook"></i></td>
+</div>
+
+
+<div>
+    <h3 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp; Memebers: </h3>
+</div>
+<div class="row" style=" margin-left: 35px; ">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact No</th>
+                <th colspan="2">Social Media</th>
+                <th>Work Position</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            {% for p in person %}
+            <tr>
+                <td>{{ p.firstName }} {{ p.lastName }}</td>
+                <td>{{ p.email }}</td>
+                <td>{{ p.phoneNo }}</td>
+                <td><a href="{{ p.fb }}" target="_blank"><i class="fa fa-facebook"></i></td>
                     <td><a href="{{ p.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></td>
 					<td>{{ p.position }}</td>
 					</tr>
@@ -62,6 +65,7 @@
 			</tbody>
 		</table>
 	</div>
+    
 	{% endblock %}
     <!-- 
         <div class="col m5" style="margin: 0 20px 20px 20px;">
@@ -72,13 +76,13 @@
                  <div class="col m7"><br>
                   <p style="font-size: 18px; font-weight: bold;"><i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; {{ instance.position }}</p><br>  
                   <a href="mailto:{{ instance.email }}" style="color:white"><p style="font-size: 15px; font-weight: bold;" ><i class="fa fa-envelope"></i> &nbsp; {{ instance.email }}</p></a><br>
-                        <p style="font-size: 15px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</p>
-    </div>
-    <div class="col m2" style="margin-right: 20px">
-        <img src='{% static ' images/Core Team/ ' %}{{ instance.firstName }}.jpg' class="circle" style="height:160px; width:160px;">
-    </div>
-    <div class="col m2">
-    </div>
+                    <p style="font-size: 15px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</p>
+</div>
+<div class="col m2" style="margin-right: 20px">
+    <img src='{% static ' images/Core Team/ ' %}{{ instance.firstName }}.jpg' class="circle" style="height:160px; width:160px;">
+</div>
+<div class="col m2">
+</div>
 </div>
 </div>
 <div class="card-action">

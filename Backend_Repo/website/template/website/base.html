@@ -10,96 +10,102 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
     <title>E-Cell IIIT Hyderabad</title>
-    
+
     <!-- jQuery -->
     <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
     <!-- fonts and icons -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <link rel="icon" href="{% static 'images/logo-ecell.png' %}">
+
     <!-- materialize -->
     <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
     <script src="{% static 'js/materialize.js' %}"></script>
-    
+
     <!-- other page specific links -->
-    {% block links %}
-    {% endblock %}
-    
+    {% block links %} {% endblock %}
+
     <!-- default styles -->
     <style>
-       body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
-
-    main {
-        flex: 1 0 auto;
-    }
-    body {
-        background-color: #DFE2DB !important;
-    }
-
-    .btn {
-        background-color: #FFF000;
-        color: black !important;
-    }
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+        
+        body {
+            background-color: white !important;
+        }
+        
+        .btn {
+            background-color: #FFF000;
+            color: black !important;
+        }
+        
+        .index-round-image {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
 
     <!-- other page specific styles -->
-    {% block styles %}
-    {% endblock %}
+    {% block styles %} {% endblock %}
 
 </head>
 
 <body>
+
     <header>
-        
-    <nav>
-        <div class="nav-wrapper black">
-            <!--<div class="col-md-1">
+
+        <nav>
+            <div class="nav-wrapper black">
+                <!--<div class="col-md-1">
         </div>-->
-        <div class="col-md-2">
-            <a href="/website/"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
-        </div>
-        <div class="col-md-10">
-                <ul id="nav-mobile" class="black right hide-on-med-and-down">
-                    <li> <a class='dropdown-button btn' href='#' data-activates='aboutus-dropdown'>About Us</a></li>
-                    <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
-                    <li> <a class='dropdown-button btn' href='#' data-activates='associates-dropdown'>Associates</a></li>
-                    <li> <a class='btn' href="/website/gallery">Gallery</a></li>
-                    <li> <a class='btn' href="/website/team">Team</a></li>
-                    <li> <a class='btn' href="/website/contact">Contact Us</a></li>
-                    <!--<li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>-->
-                </ul>
-        </div>
-    </nav>
-    <ul id='aboutus-dropdown' class='dropdown-content'>
-        <li><a href="/website/about/vision">Vision</a></li>
-        <li class="divider"></li>
-        <li><a href="about/success_stories">Success Stories</a></li>
-    </ul>
-    <ul id="associates-dropdown" class="dropdown-content">
-        <li><a href="/website/associates/associates">Associates</a></li>
-        <li><a href="/website/associates/associates/#Partners">Patners</a></li>
-        <!--<li><a href="/website/associates/associates/#Sponsors">Sponsors</a></li>-->
-    </ul>
-    <ul id="mentors-dropdown" class="dropdown-content">
-        <li><a href="/website/mentors/industry">Industry</a></li>
-        <li><a href="/website/mentors/faculty">Faculty</a></li>
-        <li><a href="/website/mentors/students">Students</a></li>
-    </ul>
+                <div class="col-md-2">
+                    <a href="/website/"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
+                </div>
+                <div class="col-md-10">
+                    <ul id="nav-mobile" class="black right hide-on-med-and-down">
+                        <li> <a class='dropdown-button btn' href='/website/about/vision' data-activates='aboutus-dropdown'>About Us</a></li>
+                        <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
+                        <li> <a class='dropdown-button btn' href='/website/associates/associates' data-activates='associates-dropdown'>Associates</a></li>
+                        <!--<li> <a class='btn' href="/website/gallery">Gallery</a></li>-->
+                        <li> <a class='btn' href="/website/team">Team</a></li>
+                        <li> <a class='btn' href="/website/contact">Contact Us</a></li>
+                        <!--<li> <a class='dropdown-button btn' href='#' data-activates='mentors-dropdown'>Mentors</a></li>-->
+                    </ul>
+                </div>
+        </nav>
+        <ul id='aboutus-dropdown' class='dropdown-content'>
+            <li><a href="/website/about/vision">Vision</a></li>
+            <li><a href="/website/about/vision/#success_stories">Success Stories</a></li>
+        </ul>
+        <ul id="associates-dropdown" class="dropdown-content">
+            <li><a href="/website/associates/associates">Associates</a></li>
+            <li><a href="/website/associates/associates/#Partners">Patners</a></li>
+            <!--<li><a href="/website/associates/associates/#Sponsors">Sponsors</a></li>-->
+        </ul>
+        <ul id="mentors-dropdown" class="dropdown-content">
+            <li><a href="/website/mentors/industry">Industry</a></li>
+            <li><a href="/website/mentors/faculty">Faculty</a></li>
+            <li><a href="/website/mentors/students">Students</a></li>
+        </ul>
     </header>
     <main>
-        {% block main %}
-        {% endblock %}
+        <img class="img-responsive" src="{% static 'images/thinindexheader.png' %}" />
+        {% block main %} {% endblock %}
     </main>
     <footer class="page-footer black">
         <div class="container">
@@ -137,14 +143,15 @@
                                   <a href="mailto:asd@asd.asd"><span class="fa fa-envelope"></span> asd@asd.asd<br></a>
                               </p>
                           </address>
-                      </div>
-                  </div>
-              </div>
-              <div class="col l3 s12">
-                <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col l3 s12">
+                    <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>
