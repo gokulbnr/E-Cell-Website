@@ -5,43 +5,136 @@
     th {
         text-align: center;
     }
+
+/* User Card */
+
+.user .parent-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.user .parent {
+  justify-content: center;
+}
+
+.user .card {
+  width: 200px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: inline-grid;
+}
+
+.user .data.thumbnail {
+  max-height: 100px;
+}
+
+.user .empty {
+  /*background-color: #d4d7d;*/
+  height: 5em;
+}
+
+.user .data {
+  background-color: #263238;
+  color: white;
+  height: 200px;
+  padding: 10px;
+}
+
+.user .dp {
+  margin-top: -5em;
+  border-radius: 100%;
+}
+
+.user .name {
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.user .handle {
+  font-size: 1em;
+  text-align: center;
+  opacity: 0.7;
+  padding: 0.5em;
+}
+
+.user .phoneNo {
+  font-size: 0.8em;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.user .links {
+  margin-bottom: 0px;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  padding-bottom: 1em;
+  left: 0;
+  right: 0;
+  word-wrap: break-word;
+  margin-top: 1em;
+  text-align: justify;
+  letter-spacing: 0.1em;
+}
+
+.user .links .row {
+  margin-bottom: 5px;
+  display: flex;
+  text-align: center;
+}
+
+.user .links .row .link {
+    flex-grow: 1;
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:right;
+     /*inline-block space fix */
+    margin-right:-4px;
+}
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 80%;
+  }
+}
 </style>
 
-<div class="col-md-12 animated fadeIn">
-    <h1 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp;Core Team </h1>
+<div class="col m12 animated fadeIn">
+    <h1 style="font-family:'Lato',serif; font-size:60px">&nbsp;&nbsp;Core Team </h1>
 </div>
-</div>
-<div class="panel panel-default ">
-    <div class="row " style="margin-left: 35px;">
-        <br />
-        <!--<div class="panel panel-default">-->
+<div class="container user">
+    <div class="row parent-wrapper center">
+        <div>
         {% for instance in person %}
-        <div class="col m5 card card-main white-text blue-grey darken-2;font-family:'Open Sans', sans-serif" style="width: 14em; margin: 0.5em 0.5em 1em 0.5em;">
-            <div class="empty blue-grey lighten-3" style="height: 5.3em;margin: 0em -0.8em 0em -0.8em;"></div>
-            <div class="row card-content profile-data center" style=" height: 9em; padding: 1em!important;font-size: 15px;">
-                <img class="profile-img center" height="100" style="margin-top:-5em;" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
-                <div class="person-name card-title">{{ instance.firstName }} {{ instance.lastName }}</div>
-                <div class="person-role">{{ instance.position }}</div>
-            </div>
-            <div class="center person-contact-details" style="height: 5em;">
-                <div class="row">
-                    <div style="font-family:'Lato',serif; font-size:12px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</div>
-                    <a href="mailto:{{ instance.email }}" class="waves-effect email btn col s3 offset-s1"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                    <a href="{{ instance.fb }}" class="waves-effect facebook-link btn col s3 offset-s1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="{{ instance.linkedin }}" class="waves-effect linkedin-link btn col s3 offset-s1"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <div class="card child">
+                <div class="empty blue-grey lighten-3"></div>
+                <div class="card-action data center">
+                   <img class="dp center" height="100" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
+                   <div class="name">{{ instance.firstName }} {{ instance.lastName }}</div>
+                   <div class="handle">{{ instance.position }}</div>
+                   <div class="phoneNo">{{instance.phoneNumber}}</div>
+                   <div class="center links">
+                      <div class="row">
+                        <a href="mailto:{{ instance.email }}" class="link waves-effect email"><span class="fa fa-envelope" aria-hidden="true"></span></a>
+                        <a href="{{ instance.fb }}" class="link waves-effect facebook-link"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                        <a href="{{ instance.linkedin }}" class="link waves-effect linkedin-link"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                      </div>
+                    </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
+        </div>
     </div>
 </div>
 
-
 <div>
-    <h3 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp; Memebers: </h3>
+    <h3 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp; Members: </h3>
 </div>
-<div class="row" style=" margin-left: 35px; ">
-    <table class="table">
+<div class="row" style="margin-left: 30px; ">
+    <table class="striped responsive-table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -58,36 +151,12 @@
                 <td>{{ p.email }}</td>
                 <td>{{ p.phoneNo }}</td>
                 <td><a href="{{ p.fb }}" target="_blank"><i class="fa fa-facebook"></i></td>
-                    <td><a href="{{ p.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></td>
-					<td>{{ p.position }}</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	</div>
+                <td><a href="{{ p.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></td>
+				<td>{{ p.position }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
     
 	{% endblock %}
-    <!-- 
-        <div class="col m5" style="margin: 0 20px 20px 20px;">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title"><h4>&nbsp;&nbsp;{{ instance.firstName }} {{ instance.lastName }}</h4></span>
-               <div class="row">
-                 <div class="col m7"><br>
-                  <p style="font-size: 18px; font-weight: bold;"><i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; {{ instance.position }}</p><br>  
-                  <a href="mailto:{{ instance.email }}" style="color:white"><p style="font-size: 15px; font-weight: bold;" ><i class="fa fa-envelope"></i> &nbsp; {{ instance.email }}</p></a><br>
-                    <p style="font-size: 15px; font-weight: bold;"><i class="fa fa-phone"></i>&nbsp; {{ instance.phoneNo }}</p>
-</div>
-<div class="col m2" style="margin-right: 20px">
-    <img src='{% static ' images/Core Team/ ' %}{{ instance.firstName }}.jpg' class="circle" style="height:160px; width:160px;">
-</div>
-<div class="col m2">
-</div>
-</div>
-</div>
-<div class="card-action">
-    <a href="{{ instance.fb }}"><i class="fa fa-facebook" target="_blank"></i>&nbsp;&nbsp;Facebook</a>
-    <a href="{{ instance.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;LinkedIn</a>
-</div>
-</div>
-</div> -->
