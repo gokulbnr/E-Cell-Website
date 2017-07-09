@@ -1,7 +1,7 @@
 {% extends "website/base.html" %} {% block styles %}{% load staticfiles %}
 
 <style>
-#map {
+    #map {
         height: 400px;
         width: 100%;
     }
@@ -50,63 +50,69 @@
 </div>
 <div class="panel panel-default">
     <div class='row animated fadeIn'>
-
-        <div class="col-md-4 index-round-image">
-            <img style="border-radius: 100%; height: 200px ; width:200px" src="{% static 'images/Core Team/dhriti.jpg' %}" />
+        <div class="col s12 m4">
+            <div class="card center" style="width: auto;">
+                <div class="row">
+                    <img style="border-radius: 100%; height: 200px ; width:200px" src="{% static 'images/Core Team/dhriti.jpg' %}" />
+                </div>
+                <div class="row">
+                    <p style="font-family:'Lato',serif; font-size:30px">&nbsp; Dhriti Goyal</p>
+                </div>
+                <div class="row">
+                    <p style="font-style: italic; font-family: 'Open Sans', sans-serif;font-size:17px">Parterships and Ventures</p>
+                </div>
+                <div class="row">
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:17px">&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91 1234567890</p>
+                </div>
+                <div class="row">
+                    <p style=" font-family: 'Open Sans', sans-serif;font-size:17px"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; dhriti.goyal@sample.com</p>
+                </div>
+            </div>
+        </div><div class="col s12 m4">
+            <div class="card center" style="width: auto;">
+                <div class="row">
+                    <img style="border-radius: 100%; height: 200px ; width:200px" src="{% static 'images/Core Team/parin.jpg' %}" />
+                </div>
+                <div class="row">
+                    <p style="font-family:'Lato',serif; font-size:30px">&nbsp; Parin Vachhani</p>
+                </div>
+                <div class="row">
+                    <p style="font-style: italic; font-family: 'Open Sans', sans-serif;font-size:17px">Corporate Relations and Alumni</p>
+                </div>
+                <div class="row">
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:17px">&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91 1234567890</p>
+                </div>
+                <div class="row">
+                    <p style=" font-family: 'Open Sans', sans-serif;font-size:17px"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; dhriti.goyal@sample.com</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 index-round-image">
-            <img style="border-radius: 100%; height: 200px ; width:200px" src="{% static 'images/Core Team/parin.jpg' %}" />
-        </div>
-        <div class="col-md-4 index-round-image">
-            <img style="border-radius: 100%; height: 200px ; width:200px" src="{% static 'images/Core Team/deepanshu.jpg' %}" />
-        </div>
-
-
-        <div class="col-md-4 index-round-image">
-            <p style="font-family:'Lato',serif; font-size:30px">&nbsp; Dhriti Goyal</p>
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style="font-family:'Lato',serif; font-size:30px">&nbsp; Parin Vachhani</p>
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style="font-family:'Lato',serif; font-size:30px">&nbsp; Deepanshu Jain</p>
-        </div>
-
-        <div class="col-md-4 index-round-image">
-            <p style="font-style: italic; font-family: 'Open Sans', sans-serif;font-size:17px">Parterships and Ventures</p>
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style="font-style: italic; font-family: 'Open Sans', sans-serif;font-size:17px">Corporate Relations and Alumni</p>
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style="font-style: italic; font-family: 'Open Sans', sans-serif;font-size:17px">Events and Management</p>
-        </div>
-
-        <div class="col-md-4 index-round-image">
-            <p style=" font-family: 'Open Sans', sans-serif;font-size:17px">&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91 1234567890</p>
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style=" font-family: 'Open Sans', sans-serif;font-size:17px">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91 1234567890</p>
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style=" font-family: 'Open Sans', sans-serif;font-size:17px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91 1234567890</p>
-        </div>
-
-        <div class="col-md-4 index-round-image">
-            <p style=" font-family: 'Open Sans', sans-serif;font-size:17px"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; dhriti.goyal@sample.com
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style=" font-family: 'Open Sans', sans-serif;font-size:17px"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; dhriti.goyal@sample.com
-        </div>
-        <div class="col-md-4 index-round-image">
-            <p style=" font-family: 'Open Sans', sans-serif;font-size:17px"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; dhriti.goyal@sample.com
+        <div class="col s12 m4">
+            <div class="card center" style="width: auto;">
+                <div class="row">
+                    <img style="border-radius: 100%; height: 200px ; width:200px" src="{% static 'images/Core Team/deepanshu.jpg' %}" />
+                </div>
+                <div class="row">
+                    <p style="font-family:'Lato',serif; font-size:30px">&nbsp; Deepanshu Jain</p>
+                </div>
+                <div class="row">
+                    <p style="font-style: italic; font-family: 'Open Sans', sans-serif;font-size:17px">Events and Management</p>
+                </div>
+                <div class="row">
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:17px">&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91 1234567890</p>
+                </div>
+                <div class="row">
+                    <p style=" font-family: 'Open Sans', sans-serif;font-size:17px"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; dhriti.goyal@sample.com</p>
+                </div>
+            </div>
         </div>
     </div>
-    <br />
-    <hr size=5 />
-    <p style="text-align:center; font-family: 'Open Sans', sans-serif;font-size:17px"> Mail us at <a href="mailto:ecell@iiit.ac.in">ecell@iiit.ac.in </a> or checkout our <a href=""> facebook page</a> for more information.</p>
+</div>
+<br />
+<hr size=5 />
+<p style="text-align:center; font-family: 'Open Sans', sans-serif;font-size:17px"> Mail us at <a href="mailto:ecell@iiit.ac.in">ecell@iiit.ac.in </a> or checkout our <a href=""> facebook page</a> for more information.</p>
 
-    <hr size=5 />
+<hr size=5 />
 </div>
 
 <div class="card-content" id="map">
