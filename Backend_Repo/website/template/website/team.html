@@ -102,8 +102,11 @@
     }
 </style>
 
-<div class="col m12 animated fadeIn">
-    <h1 style="font-family:'Lato',serif; font-size:60px">&nbsp;&nbsp;Core Team </h1>
+<div class="col animated fadeIn">
+    <h1 class="text-center" style=" font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600px;">Core Team </h1>
 </div>
 <div class="container user">
     <div class="row parent-wrapper center">
@@ -130,31 +133,37 @@
     </div>
 </div>
 
+<br /><br />
+
+
 
 <!--Memebers' Section, to be added once teams are finalised.-->
 
 <div>
-    <h3 style="font-family:'Lato',serif; font-size:60px"> &nbsp;&nbsp; Members: </h3>
+    <h3 class="text-center" style=" font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600px;"> Members </h3>
 </div>
-<div class="row" style="margin-left: 30px; ">
-    <table class="striped responsive-table">
+<div class=" row " style="margin-left: 30px; ">
+    <table class="striped responsive-table ">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Contact No</th>
-                <th colspan="2">Social Media</th>
+                <th colspan="2 ">Social Media</th>
                 <th>Work Position</th>
             </tr>
         </thead>
-        <tbody style="text-align: center;">
+        <tbody style="text-align: center; ">
             {% for p in person %}
             <tr>
                 <td>{{ p.firstName }} {{ p.lastName }}</td>
                 <td>{{ p.email }}</td>
                 <td>{{ p.phoneNo }}</td>
-                <td><a href="{{ p.fb }}" target="_blank"><i class="fa fa-facebook"></i></td>
-                <td><a href="{{ p.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></td>
+                <td><a href="{{ p.fb }} " target="_blank "><i class="fa fa-facebook "></i></td>
+                <td><a href="{{ p.linkedin }} " target="_blank "><i class="fa fa-linkedin "></i></td>
 				<td>{{ p.position }}</td>
 			</tr>
 			{% endfor %}
