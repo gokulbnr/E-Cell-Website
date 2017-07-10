@@ -57,10 +57,14 @@
             color: black !important;
         }
         
-        .index-round-image {
-            display: table-cell;
-            vertical-align: middle;
+        .img-center {
+            display: block;
+            margin: 0 auto;
             text-align: center;
+        }
+        
+        .justify {
+            text-align: justify;
         }
         /*Not working for some probably stupid reason */
         /*.defaut-title {
@@ -109,47 +113,46 @@
                 <!-- logo for small screen devices -->
                 <a href="/website/" class="brand-logo center hide-on-med-and-up"><img src="{% static 'images/logo-ecell2x.png' %}" style="max-height:60px; width:auto"></a>
                 <a href="#" data-activates="nav-mobile" class="right button-collapse"><i class="material-icons">menu</i></a>
-            </nav>
-            <!-- mobile navbar -->
-            <ul id="nav-mobile" class="white side-nav">
-                <li> <a class='dropdown-button btn' href='/website/about/vision' data-activates='aboutus-dropdown'>About Us</a></li>
-                <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
-                <li> <a class='dropdown-button btn' href='/website/associates/associates' data-activates='associates-dropdown'>Associates</a></li>
-                <li> <a class='btn' href="/website/team">Team</a></li>
-                <li> <a class='btn' href="/website/contact">Contact Us</a></li>
-            </ul>
-        </header>
-        <main>
-            <img class="img-responsive hide-on-small-only" src="{% static 'images/thinindexheader.png' %}" />
-            {% block main %} {% endblock %}
-        </main>
-        <footer class="page-footer black">
-            <div class="container">
-                <div class="row">
-                    <div class="col l3 s12">
-                        <div class="card black">
-                            <div class="card-content white-text">
-                                <span class="card-title">About Us</span>
-                                <li><a class="grey-text text-lighten-3" href="/website/about/vision">Vision</a></li>
-                                <li><a class="grey-text text-lighten-3" href="/website/about/success_stories">Success Stroies</a></li>
-                            </div>
+        </nav>
+        <!-- mobile navbar -->
+        <ul id="nav-mobile" class="white side-nav">
+            <li> <a class='dropdown-button btn' href='/website/about/vision' data-activates='aboutus-dropdown'>About Us</a></li>
+            <li> <a class='dropdown-button btn' href='/website/events'>Events</a></li>
+            <li> <a class='dropdown-button btn' href='/website/associates/associates' data-activates='associates-dropdown'>Associates</a></li>
+            <li> <a class='btn' href="/website/team">Team</a></li>
+            <li> <a class='btn' href="/website/contact">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <img class="img-responsive hide-on-small-only" src="{% static 'images/thinindexheader.png' %}" /> {% block main %} {% endblock %}
+    </main>
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l3 s12">
+                    <div class="card black">
+                        <div class="card-content white-text">
+                            <span class="card-title">About Us</span>
+                            <li><a class="grey-text text-lighten-3" href="/website/about/vision">Vision</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/website/about/success_stories">Success Stroies</a></li>
                         </div>
                     </div>
-                    <div class="col l3 s12">
-                        <div class="card black">
-                            <div class="card-content white-text">
-                                <span class="card-title">Events</span>
-                                <li><a class="grey-text text-lighten-3" href="/website/events/talks">Talk Sessions</a></li>
-                                <li><a class="grey-text text-lighten-3" href="/website/events/workshops">Workshops</a></li>
-                                <li><a class="grey-text text-lighten-3" href="/website/events/hackathons">Hackathons</a></li>
-                            </div>
+                </div>
+                <div class="col l3 s12">
+                    <div class="card black">
+                        <div class="card-content white-text">
+                            <span class="card-title">Events</span>
+                            <li><a class="grey-text text-lighten-3" href="/website/events/talks">Talk Sessions</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/website/events/workshops">Workshops</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/website/events/hackathons">Hackathons</a></li>
                         </div>
                     </div>
-                    <div class="col l3 s12">
-                        <div class="card black">
-                            <div class="card-content white-text">
-                                <span class="card-title">Reach Us</span>
-                                <address>
+                </div>
+                <div class="col l3 s12">
+                    <div class="card black">
+                        <div class="card-content white-text">
+                            <span class="card-title">Reach Us</span>
+                            <address>
                                  <p>
                                   E-Cell IIIT Hyderabad<br>
                                   Gachibowli<br>
@@ -158,15 +161,15 @@
                                   <a href="mailto:asd@asd.asd"><span class="fa fa-envelope"></span> asd@asd.asd<br></a>
                               </p>
                           </address>
-                      </div>
-                  </div>
-              </div>
-              <div class="col l3 s12">
-                <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col l3 s12">
+                    <img src="{% static 'images/logo-ecell2x.png' %}" style="height:200px; width:250px">
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>
