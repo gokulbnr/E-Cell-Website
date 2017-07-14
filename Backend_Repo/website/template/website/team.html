@@ -20,8 +20,8 @@
     
     .user .card {
         width: 200px;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
+        margin-left: 1em;
+        margin-right: 1em;
         display: inline-grid;
     }
     
@@ -118,12 +118,12 @@
                     <img class="dp center" height="100" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
                     <div class="name">{{ instance.firstName }} {{ instance.lastName }}</div>
                     <div class="handle">{{ instance.position }}</div>
-                    <div class="phoneNo">{{instance.phoneNo}}</div>
+                    <div class="phoneNo "><span class="fa fa-phone"></span>&nbsp; {{instance.phoneNo}}</div>
                     <div class="center links">
                         <div class="row">
                             <a href="mailto:{{ instance.email }}" class="link waves-effect email"><span class="fa fa-envelope" aria-hidden="true"></span></a>
-                            <a href="{{ instance.fb }}" class="link waves-effect facebook-link"><span class="fa fa-facebook" aria-hidden="true"></span></a>
-                            <a href="{{ instance.linkedin }}" class="link waves-effect linkedin-link"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                            <a href="{{ instance.fb }}" target="_blank" class="link waves-effect facebook-link"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            <a href="{{ instance.linkedin }}" target="_blank" class="link waves-effect linkedin-link"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
                         </div>
                     </div>
                 </div>
